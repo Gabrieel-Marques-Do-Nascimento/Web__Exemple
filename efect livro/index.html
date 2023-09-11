@@ -7,15 +7,30 @@
 </head>
 
 <style>
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+     
+    }
+   h1{
+       
+        padding-top:100px;
+    }
 .interface{
-height: 100vh;
-scroll-snap-type: y mandatory;
-overflow: scroll;
+
+height: 100vh;    /* para o efect de sobreposiçao */
+scroll-snap-type: y mandatory; /* y = vertical mandatory = obrigatorio */
+overflow-y: scroll;
 
 }
 section{
-    height: 100vh;
-    scroll-snap-align: start;
+    display: flex;
+   position: sticky;  /* para o efect de sobreposiçao */
+    top: 0;   /* para o efect de sobreposiçao */
+    left: 0;    /* para o efect de sobreposiçao */
+    height: 100vh;  /* para o efect de sobreposiçao */
+    scroll-snap-align: start; /*detrmina aonde o scroll vai travar*/
 }
 .page1{
 background-color: antiquewhite;
