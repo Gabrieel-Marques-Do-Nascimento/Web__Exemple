@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>animação quando mover a page</title>
-    <script src="script/code.js"></script>
+   
     <style>
         *{
             margin: 0%;
@@ -37,9 +37,42 @@
             display: grid;
             place-items: center;  /* alinha texto no center */
             align-items: center; /* alinha texto no center */
-            margin-bottom: 100px ;
+            margin-bottom: 20px ;
             min-height: 100vh;
         }
+        .hidden{
+            opacity: 0;
+            filter: blur(15px); /*desfoque*/
+            transition: all 1s; /* all = todos elemt  2s = tempo de transition*/
+            transform: translateX(-100%); /* 100% = fas o testo ficar do lado*/
+        }
+        .show{
+            opacity: 1;
+            transition: all 2s;  /* 3 segundos para aparecer e focar*/
+            filter: blur(0); /*desfoque*/
+            transform: translateX(0%); /*0% = texto volta pro sentro*/
+        }
+        .avatar{
+            height: 200px;
+            background-color: white;
+            border-radius: 30px;
+            margin: 5px;
+        }
+        .logos{
+            display: flex; /* fas as img ficar dalo do iutro*/
+            gap: 20px; /* distancia*/
+        }
+     
+        .logos :nth-child(2){
+            transition-delay: 400ms; /*atraso no elemento 2,3,4*/
+        }
+        .logos :nth-child(3){
+            transition-delay: 700ms;
+        }
+        .logos :nth-child(4){
+            transition-delay: 1000ms;
+        }
+    
     </style>
 </head>
 <body>
@@ -51,30 +84,50 @@
   <main>
     <h3>Main</h3>
     <article>
-        <h2>article</h2>
-        <section class="visivel">
+       
+        <section class="hidden"> <h2>article</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur suscipit non explicabo cum fuga ab molestiae blanditiis ex totam. Placeat explicabo cum tempora. Odit eius perferendis, error minus eveniet odio? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt facilis repellat consequatur numquam sed esse nihil consectetur tempore nobis facere? Maxime modi optio adipisci ratione excepturi. Nihil, voluptas! Eum, optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam esse sint ipsa voluptas, quaerat tempora fugiat, temporibus illum dolore placeat saepe ratione repudiandae ullam, porro eius vel. Eum, harum in. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum vitae cupiditate earum! Aut ipsa quidem, cumque velit voluptates minus ad delectus eveniet neque corporis? Iste beatae incidunt inventore nemo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatum quas odio eos, aliquid fugiat molestiae quasi, expedita dolores vel blanditiis, aperiam dolorem itaque dolor architecto explicabo ex voluptatem nihil.</p>
         </section>
-        <h2>article</h2>
-        <section class="visivel">
+      
+        <section class="hidden">  <h2>article</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur suscipit non explicabo cum fuga ab molestiae blanditiis ex totam. Placeat explicabo cum tempora. Odit eius perferendis, error minus eveniet odio? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt facilis repellat consequatur numquam sed esse nihil consectetur tempore nobis facere? Maxime modi optio adipisci ratione excepturi. Nihil, voluptas! Eum, optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam esse sint ipsa voluptas, quaerat tempora fugiat, temporibus illum dolore placeat saepe ratione repudiandae ullam, porro eius vel. Eum, harum in. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum vitae cupiditate earum! Aut ipsa quidem, cumque velit voluptates minus ad delectus eveniet neque corporis? Iste beatae incidunt inventore nemo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatum quas odio eos, aliquid fugiat molestiae quasi, expedita dolores vel blanditiis, aperiam dolorem itaque dolor architecto explicabo ex voluptatem nihil.</p>
         </section>
-        <h2>article</h2>
-        <section class="visivel">
+       
+        <section class="hidden"> <h2>article</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur suscipit non explicabo cum fuga ab molestiae blanditiis ex totam. Placeat explicabo cum tempora. Odit eius perferendis, error minus eveniet odio? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt facilis repellat consequatur numquam sed esse nihil consectetur tempore nobis facere? Maxime modi optio adipisci ratione excepturi. Nihil, voluptas! Eum, optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam esse sint ipsa voluptas, quaerat tempora fugiat, temporibus illum dolore placeat saepe ratione repudiandae ullam, porro eius vel. Eum, harum in. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum vitae cupiditate earum! Aut ipsa quidem, cumque velit voluptates minus ad delectus eveniet neque corporis? Iste beatae incidunt inventore nemo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatum quas odio eos, aliquid fugiat molestiae quasi, expedita dolores vel blanditiis, aperiam dolorem itaque dolor architecto explicabo ex voluptatem nihil.</p>
         </section>
-        <h2>article</h2>
-        <section class="visivel">
+       
+        <section class="hidden"> <h2>article</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur suscipit non explicabo cum fuga ab molestiae blanditiis ex totam. Placeat explicabo cum tempora. Odit eius perferendis, error minus eveniet odio? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt facilis repellat consequatur numquam sed esse nihil consectetur tempore nobis facere? Maxime modi optio adipisci ratione excepturi. Nihil, voluptas! Eum, optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam esse sint ipsa voluptas, quaerat tempora fugiat, temporibus illum dolore placeat saepe ratione repudiandae ullam, porro eius vel. Eum, harum in. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum vitae cupiditate earum! Aut ipsa quidem, cumque velit voluptates minus ad delectus eveniet neque corporis? Iste beatae incidunt inventore nemo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatum quas odio eos, aliquid fugiat molestiae quasi, expedita dolores vel blanditiis, aperiam dolorem itaque dolor architecto explicabo ex voluptatem nihil.</p>
         </section>
-        <h2>article</h2>
-        <section class="visivel">
+       
+        <section class="hidden"> <h2>article</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur suscipit non explicabo cum fuga ab molestiae blanditiis ex totam. Placeat explicabo cum tempora. Odit eius perferendis, error minus eveniet odio? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt facilis repellat consequatur numquam sed esse nihil consectetur tempore nobis facere? Maxime modi optio adipisci ratione excepturi. Nihil, voluptas! Eum, optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam esse sint ipsa voluptas, quaerat tempora fugiat, temporibus illum dolore placeat saepe ratione repudiandae ullam, porro eius vel. Eum, harum in. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum vitae cupiditate earum! Aut ipsa quidem, cumque velit voluptates minus ad delectus eveniet neque corporis? Iste beatae incidunt inventore nemo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatum quas odio eos, aliquid fugiat molestiae quasi, expedita dolores vel blanditiis, aperiam dolorem itaque dolor architecto explicabo ex voluptatem nihil.</p>
         </section>
-        <section class="last-one">
+        <section class="hidden">
             <img src="https://th.bing.com/th/id/OIP.qa_3YkGUArtrYczkNjGqegHaHa?w=151&h=180&c=7&r=0&o=5&pid=1.7" alt="">
         </section>
+             
+        <section class="hidden">
+            <div class="logos">
+                <div class="hidden">
+                    <img src="https://robohash.org/1png" alt="" class="avatar">
+                </div>
+                <div class="hidden">
+                    <img src="https://robohash.org/1png" alt="" class="avatar">
+                </div>
+                <div class="hidden">
+                    <img src="https://robohash.org/1png" alt="" class="avatar">
+                </div>
+                <div class="hidden">
+                    <img src="https://robohash.org/1png" alt="" class="avatar">
+                </div>
+            </div>
+        </section>
+
+
     </article>
+
   </main>
     </div>
 
