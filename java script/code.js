@@ -2,9 +2,20 @@
 // anotacao simples de linha 
 /* anotacao simples de paragrafo */
 
-
-
-
+/** 
+* @return total sum
+function sum( ...nome)  // utilizando ...nome da variavel arry a funcao aseita quantos parametro vc quiser
+Ex : sum(1 , 2 ,3 ,4) // po diante
+*/
+function sum(...args) {
+    let total = 0;
+    for (let a of args) {
+       
+        total += a;
+    }
+    return total
+}
+console.log('TOTAL', sum( 6,2,4,3,7));
 
 
 
@@ -72,7 +83,7 @@
 
 
 // funcao    arrow / arrow function  // seta =>
-
+/*
 const Multi = ( Numero01 , Numero02 ) => {   //  parametro pode ter o mesmo nome em varias funções diferentes por q nao funciona fora da função
 
 const vezes = Numero01 * Numero02
@@ -85,8 +96,8 @@ console.log(vezess)
 
 
 // funcao       parametro                  return                     numro01 X numero02         
-const Multip = ( Numero01 , Numero02 ) =>/*como se tivese um return*/ Numero01 * Numero02
-    
+const Multip = ( Numero01 , Numero02 ) =>/*como se tivese um return / *  Numero01 * Numero02
+    */
     
     
     
