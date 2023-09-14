@@ -1,3 +1,16 @@
+
+// anotacao simples de linha 
+/* anotacao simples de paragrafo */
+
+
+
+
+
+
+
+
+
+
 // /*funcao = trcho de codego q so e executado quando chamado/invocado
 
 // funcao void (vazio)
