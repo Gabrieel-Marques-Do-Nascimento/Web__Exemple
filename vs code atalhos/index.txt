@@ -1,0 +1,1945 @@
+Sintaxe
+Criança: >
+
+nav>ul>li
+
+<nav> <ul> <li></li> </ul> </nav>
+
+
+
+Irmão: +
+
+div+p+bq
+
+<div></div> <p></p> <blockquote></blockquote>
+
+
+Subida: ^
+
+div+div>p>span+em^bq
+
+<div></div> <div> <p><span></span><em></em></p> <blockquote></blockquote> </div>
+
+div+div>p>span+em^^bq
+
+<div></div> <div> <p><span></span><em></em></p> </div> <blockquote></blockquote>
+
+Agrupamento: ()
+
+div>(cabeçalho>ul>li*2>a)+rodapé>p
+
+<div> <header> <ul> <li><a href=""></a></li> <li><a href=""></a></li> </ul> < /header> <footer> <p></p> </footer> </div>
+
+(div>dl>(dt+dd)*3)+rodapé>p
+
+<div> <dl> <dt></dt> <dd></dd> <dt></dt> <dd></dd> <dt></dt> <dd></dd> </ dl> </div> <footer> <p></p> </footer>
+Multiplicação: *
+ul>li*5
+<ul> <li></li> <li></li> <li></li> <li></li> <li></li> </ul>
+Numeração dos itens: $
+ul>li.item$*5
+<ul> <li class="item1"></li> <li class="item2"></li> <li class="item3"></li> <li class="item4"></li > <li class="item5"></li> </ul>
+h$[título=item$]{Cabeçalho $}*3
+<h1 title="item1">Cabeçalho 1</h1> <h2 title="item2">Cabeçalho 2</h2> <h3 title="item3">Cabeçalho 3</h3>
+ul>li.item$$$*5
+<ul> <li class="item001"></li> <li class="item002"></li> <li class="item003"></li> <li class="item004"></li > <li class="item005"></li> </ul>
+ul>li.item$@-*5
+<ul> <li class="item5"></li> <li class="item4"></li> <li class="item3"></li> <li class="item2"></li > <li class="item1"></li> </ul>
+ul>li.item$@3*5
+<ul> <li class="item3"></li> <li class="item4"></li> <li class="item5"></li> <li class="item6"></li > <li class="item7"></li> </ul>
+Atributos de ID e CLASSE
+#cabeçalho
+<div id="header"></div>
+.título
+<div class="title"></div>
+formulário#search.wide
+<form id="search" class="wide"></form>
+p.class1.class2.class3
+<p class="class1 class2 class3"></p>
+Atributos personalizados
+p[title="Olá mundo"]
+<p title="Olá, mundo"></p>
+td[rowspan=2 colspan=3 título]
+<td rowspan="2" colspan="3" title=""></td>
+[a='valor1' b="valor2"]
+<div a="valor1" b="valor2"></div>
+Texto: {}
+a{Clique em mim}
+<a href="">Clique em mim</a>
+p>{Clique em }+a{aqui}+{ para continuar}
+<p>Clique <a href="">aqui</a> para continuar</p>
+Nomes de tags implícitos
+.aula
+<div class="class"></div>
+em>.class
+<em><span class="class"></span></em>
+ul>.class
+<ul> <li class="class"></li> </ul>
+tabela>.linha>.col
+<table> <tr class="row"> <td class="col"></td> </tr> </table>
+HTML
+Todas as abreviações desconhecidas serão transformadas em tags, por exemplo foo→ <foo></foo>.
+
+!
+Alias ​​de HTML:5
+
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <title>Documento</title> </head> <body>
+    
+</body> </html>
+a
+<ahref=""></a>
+um: link
+<ahref="http://"></a>
+um: correio
+<a href="mailto:"></a>
+abreviatura
+<abbr title=""></abbr>
+sigla, acr
+<título da sigla = ""></acrônimo>
+base
+<base href=""/>
+fonte base
+<basefont />
+br
+<br />
+quadro
+<quadro />
+horas
+<hr />
+bdo
+<bdo dir=""></bdo>
+bdo:r
+<bdo dir="rtl"></bdo>
+bdo:eu
+<bdo dir="ltr"></bdo>
+coluna
+<col />
+link
+<link rel="folha de estilo" href=""/>
+link:css
+<link rel="folha de estilo" href="estilo.css" />
+link: imprimir
+<link rel="folha de estilo" href="imprimir.css" media="imprimir" />
+link:favicon
+<link rel="ícone de atalho" type="image/x-icon" href="favicon.ico"/>
+link:toque
+<link rel="apple-touch-icon" href="favicon.png"/>
+link:rss
+<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml"/>
+link: átomo
+<link rel="alternate" type="application/atom+xml" title="Atom" href="átomo.xml"/>
+link:importar, link:im
+<link rel="importar" href="componente.html"/>
+meta
+<meta />
+meta:utf
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+meta: vencer
+<meta http-equiv="Content-Type" content="text/html;charset=windows-1251" />
+meta:vp
+<meta name="viewport" content="largura=largura do dispositivo, escalável pelo usuário=não, escala inicial=1,0, escala máxima=1,0, escala mínima=1,0"/>
+meta:compat
+<meta http-equiv="Compatível com X-UA" content="Ou seja=7"/>
+estilo
+<estilo></estilo>
+roteiro
+<roteiro></script>
+roteiro:src
+<script src=""></script>
+imagem
+<img src="" alt=""/>
+img:srcset, img:s
+<img srcset=""src="" alt=""/>
+img:tamanhos, img:z
+<tamanhos img=""srcset=""src="" alt=""/>
+foto
+<imagem></imagem>
+fonte, src
+<fonte />
+fonte:src,src:sc
+<fonte src=""tipo=""/>
+fonte:srcset,src:s
+< fonte srcset = ""/>
+fonte: mídia, src: m
+<fonte de mídia="(largura mínima:)"srcset=""/>
+fonte: tipo, src: t
+< fonte srcset = ""tipo="imagem/"/>
+fonte: tamanhos, src: z
+<tamanhos de origem=""srcset=""/>
+fonte: mídia: tipo, src: mt
+<fonte de mídia="(largura mínima:)"srcset=""tipo="imagem/"/>
+fonte: mídia: tamanhos, src: mz
+<fonte de mídia="(largura mínima:)" tamanhos=""srcset=""/>
+fonte: tamanhos: tipo, src: zt
+<tamanhos de origem=""srcset=""tipo="imagem/"/>
+iframe
+<iframe src=""quadroborder="0"></iframe>
+Embutir
+<incorporar src=""tipo=""/>
+objeto
+<dados do objeto=""tipo=""></objeto>
+parâmetro
+<nome do parâmetro=""valor=""/>
+mapa
+<nome do mapa=""></mapa>
+área
+<formato de área=""coordenadas=""href="" alt=""/>
+área:d
+<area shape="default" href="" alt=""/>
+área: c
+<area shape="círculo" coordenadas=""href="" alt=""/>
+área:r
+<area shape="rect" coords=""href="" alt=""/>
+área:p
+<area shape="poli" coords=""href="" alt=""/>
+forma
+<forma ação=""></form>
+formulário:obter
+<forma ação=""método="obter"></form>
+formulário: postagem
+<forma ação=""método="postagem"></form>
+rótulo
+<rótulo para = ""></label>
+entrada
+<tipo de entrada="texto"/>
+entrada
+<tipo de entrada="texto"nome=""id=""/>
+entrada:oculto, entrada:h
+Alias ​​de entrada[tipo=nome oculto]
+
+<input type="nome oculto"=""/>
+entrada: texto, entrada: t
+Alias ​​de inp
+
+<tipo de entrada="texto"nome=""id=""/>
+entrada: pesquisa
+Alias ​​de inp[type=search]
+
+<input type="pesquisar" nome=""id=""/>
+entrada:e-mail
+Alias ​​de inp[type=email]
+
+<input type="e-mail" nome=""id=""/>
+entrada:url
+Alias ​​de inp[type=url]
+
+<input type="url" nome=""id=""/>
+entrada:senha, entrada:p
+Alias ​​de inp[type=senha]
+
+<input type="senha" nome=""id=""/>
+entrada: datahora
+Alias ​​de inp[type=datetime]
+
+<input type="datahora" nome=""id=""/>
+entrada:data
+Alias ​​de inp[type=data]
+
+<input type="data" nome=""id=""/>
+entrada:datahora-local
+Alias ​​de inp[type=datetime-local]
+
+<input type="datetime-local" nome=""id=""/>
+entrada: mês
+Alias ​​de inp[type=mês]
+
+<input type="mês" nome=""id=""/>
+entrada: semana
+Alias ​​de inp[type=semana]
+
+<input type="semana" nome=""id=""/>
+entrada: hora
+Alias ​​de inp[type=time]
+
+<input type="hora" nome=""id=""/>
+entrada:tel
+Alias ​​de inp[type=tel]
+
+<input type="tel" nome=""id=""/>
+número de entrada
+Alias ​​de inp[tipo=número]
+
+<input type="número" nome=""id=""/>
+entrada: cor
+Alias ​​de inp[type=color]
+
+<input type="cor" nome=""id=""/>
+entrada: caixa de seleção, entrada: c
+Alias ​​de inp[type=checkbox]
+
+<input type="caixa de seleção" nome=""id=""/>
+entrada:rádio, entrada:r
+Alias ​​de inp[type=radio]
+
+<input type="rádio" nome=""id=""/>
+entrada: intervalo
+Alias ​​de inp[type=range]
+
+<input type="intervalo" nome=""id=""/>
+entrada: arquivo, entrada: f
+Alias ​​de inp[type=arquivo]
+
+<input type="arquivo" nome=""id=""/>
+entrada: enviar, entrada: s
+<input type="enviar" valor=""/>
+entrada:imagem, entrada:i
+<input type="imagem" src="" alt=""/>
+entrada: botão, entrada: b
+<input type="botão" valor=""/>
+índice is
+<isindex />
+entrada: redefinir
+Alias ​​de entrada:button[type=reset]
+
+<input type="redefinir" valor=""/>
+selecione
+<selecione nome=""id=""></selecionar>
+selecione:desativado, selecione:d
+Alias ​​de seleção[desabilitado.]
+
+<selecione nome=""id=""desativado="desativado"></selecionar>
+opção, optar
+<valor da opção=""></opção>
+área de texto
+<nome da área de texto=""id=""cols="30" linhas = "10"></textarea>
+marquise
+<comportamento do letreiro = ""direção=""></marca>
+menu:contexto, menu:c
+Alias ​​do menu[type=context]>
+
+<menu type="contexto"></menu>
+menu:barra de ferramentas, menu:t
+Alias ​​do menu[type=toolbar]>
+
+<menu type="barra de ferramentas"></menu>
+vídeo
+<vídeo src=""></vídeo>
+áudio
+<src de áudio=""></audio>
+html:xml
+<html xmlns="http://www.w3.org/1999/xhtml"></html>
+geração de chaves
+<keygen/>
+comando
+<comando />
+botão: enviar, botão: s, btn: s
+Alias ​​do botão[type=submit]
+
+<button type="enviar"></button>
+botão:redefinir, botão:r, btn:r
+Alias ​​do botão[type=reset]
+
+<button type="redefinir"></button>
+botão:desativado, botão:d, btn:d
+Alias ​​do botão[desativado.]
+
+<botão desabilitado="desabilitado"></button>
+fieldset:desativado, fieldset:d, fset:d, fst:d
+Alias ​​de fieldset[desabilitado.]
+
+<fieldset desativado="desativado"></fieldset>
+churrasco
+Alias ​​de blockquote
+
+<blockquote></blockquote>
+Figo
+Alias ​​de figura
+
+<figura></figura>
+figura
+Alias ​​de figcaption
+
+<figcaption></figcaption>
+foto
+Alias ​​da imagem
+
+<imagem></imagem>
+ifr
+Alias ​​do iframe
+
+<iframe src=""quadroborder="0"></iframe>
+incorporar
+Alias ​​de incorporação
+
+<incorporar src=""tipo=""/>
+obj
+Alias ​​do objeto
+
+<dados do objeto=""tipo=""></objeto>
+boné
+Alias ​​da legenda
+
+<legenda></caption>
+colg
+Alias ​​do colgroup
+
+<colgrupo></colgroup>
+primeiro, primeiro
+Alias ​​do conjunto de campos
+
+<conjunto de campos></fieldset>
+btn
+Alias ​​do botão
+
+<botão></button>
+opte
+Alias ​​do optgroup
+
+<optgroup></optgroup>
+tarea
+Alias ​​da área de texto
+
+<nome da área de texto=""id=""cols="30" linhas = "10"></textarea>
+perna
+Alias ​​da lenda
+
+<legenda></legenda>
+seita
+Alias ​​da seção
+
+<seção></seção>
+arte
+Alias ​​do artigo
+
+<artigo></artigo>
+hdr
+Alias ​​do cabeçalho
+
+<cabeçalho></header>
+pés
+Alias ​​do rodapé
+
+<rodapé></footer>
+endereço
+Alias ​​do endereço
+
+<endereço></endereço>
+dlg
+Alias ​​de diálogo
+
+<caixa de diálogo></dialog>
+str
+Alias ​​de forte
+
+<forte></strong>
+programa
+Alias ​​de progresso
+
+<progresso></progresso>
+homem
+Alias ​​de principal
+
+<principal></principal>
+tem
+Alias ​​do modelo
+
+<modelo></template>
+etiqueta de dados
+Alias ​​de datagrid
+
+<grade de dados></datagrid>
+dados
+Alias ​​da lista de dados
+
+<lista de dados></datalist>
+kg
+Alias ​​de keygen
+
+<keygen/>
+fora
+Alias ​​de saída
+
+<saída></saída>
+det
+Alias ​​de detalhes
+
+<detalhes></detalhes>
+cmd
+Alias ​​de comando
+
+<comando />
+documento
+Alias ​​de html>(head>meta[charset=${charset}]+title{${1:Document}})+body
+
+<html> <head> <meta charset="UTF-8" /> <título>Documento</title> </head> <body>
+    
+</body> </html>
+doc4
+Alias ​​de html>(head>meta[http-equiv="Content-Type" content="text/html;charset=${charset}"]+title{${1:Document}})+body
+
+<html> <head> <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /> <title>Documento</title> </head> <body>
+    
+</body> </html>
+ri:dpr, ri:d
+Alias ​​de img:s
+
+<img srcset=""src="" alt=""/>
+ri:porta de visualização, ri:v
+Alias ​​de img:z
+
+<tamanhos img=""srcset=""src="" alt=""/>
+ri:arte, ri:a
+Alias ​​de pic>src:m+img
+
+<imagem> <source media="(largura mínima:)"srcset="" /> <img src="" alt="" /> </imagem>
+ri:tipo, ri:t
+Alias ​​de pic>src:t+img
+
+<imagem> <fonte srcset=""tipo="imagem/" /> <img src="" alt="" /> </imagem>
+HTML:4t
+Alias ​​de !!!4t+doc4[lang=${lang}]
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> <html lang="en"> <head > <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /> <title>Documento</title> </head> <body>
+    
+</body> </html>
+HTML:4s
+Alias ​​de !!!4s+doc4[lang=${lang}]
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /> <title>Documento</title> </head> <body>
+    
+</body> </html>
+html:xt
+Alias ​​de !!!xt+doc4[xmlns=http://www.w3.org/1999/xhtml xml:lang=${lang}]
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html xmlns="http ://www.w3.org/1999/xhtml" xml:lang="en"> <head> <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /> <título>Documento</title> </head> <body>
+    
+</body> </html>
+html:xs
+Alias ​​de !!!xs+doc4[xmlns=http://www.w3.org/1999/xhtml xml:lang=${lang}]
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> <html xmlns="http ://www.w3.org/1999/xhtml" xml:lang="en"> <head> <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /> <título>Documento</title> </head> <body>
+    
+</body> </html>
+html:xxs
+Alias ​​de !!!xxs+doc4[xmlns=http://www.w3.org/1999/xhtml xml:lang=${lang}]
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> <html xmlns="http:// www.w3.org/1999/xhtml" xml:lang="en"> <head> <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /> <title>Documento</title> </head> <body>
+    
+</body> </html>
+HTML:5
+Alias ​​de !!!+doc[lang=${lang}]
+
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <title>Documento</title> </head> <body>
+    
+</body> </html>
+olá +
+Alias ​​de ol>li
+
+<ol> <li></li> </ol>
+ul+
+Alias ​​de ul>li
+
+<ul> <li></li> </ul>
+dl+
+Alias ​​de dl>dt+dd
+
+<dl> <dt></dt> <dd></dd> </dl>
+mapa+
+Alias ​​do mapa>área
+
+<nome do mapa=""> <formato de área=""coordenadas=""href="" alt="" /> </mapa>
+mesa+
+Alias ​​da tabela>tr>td
+
+<tabela> <tr> <td></td> </tr> </table>
+colgrupo+, colg+
+Alias ​​de colgroup>col
+
+<colgroup> <col /> </colgroup>
+tr+
+Alias ​​de tr>td
+
+<tr> <td></td> </tr>
+selecione+
+Alias ​​de seleção>opção
+
+<selecione nome=""id=""> <valor da opção=""></option> </select>
+optgrupo+, optg+
+Alias ​​de optgroup>opção
+
+<optgroup> <opção valor=""></option> </optgroup>
+foto +
+Alias ​​da imagem>fonte:srcset+img
+
+<imagem> <fonte srcset="" /> <img src="" alt="" /> </imagem>
+!!!
+<!DOCTYPEhtml>
+!!!4t
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+!!!4s
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+!!!xt
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+!!!xs
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+!!!xxs
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+c
+<!--${filho} -->
+cc:ie6
+<!--[if lte IE 6]> ${child}
+<![endif]-->
+cc:ou seja
+<!--[if IE]> ${child}
+<![endif]-->
+cc:não
+<!--[if !IE]><!--> ${child}
+<!--<![endif]-->
+CSS
+O módulo CSS usa pesquisa difusa para encontrar abreviações desconhecidas, por exemplo ov:h== ov-h== ovh== oh.
+
+Caso a abreviatura não seja encontrada, ela é transformada no nome da propriedade: foo-bar→foo-bar: |;
+
+Você pode prefixar abreviações com hífen para produzir propriedades prefixadas pelo fornecedor:-foo
+
+Formatação Visual
+posição
+posição:relativo;
+posição:s
+posição:estática;
+posição: uma
+posição:absoluta;
+posição:r
+posição:relativo;
+posição:f
+posição: fixa;
+t
+principal:;
+t:a
+topo:automático;
+R
+certo:;
+R:uma
+certo:automático;
+b
+fundo:;
+BA
+inferior: automático;
+eu
+esquerda:;
+eu:uma
+esquerda:automático;
+z
+índice z:;
+z:uma
+índice z:auto;
+FL
+flutuador:esquerda;
+fl:n
+flutuar: nenhum;
+fl:eu
+flutuar:esquerda;
+fl:r
+flutuar:certo;
+cl
+claro:ambos;
+cl:n
+claro: nenhum;
+cl:eu
+claro:esquerda;
+cl:r
+claro: certo;
+cl:b
+limpar ambos;
+d
+mostrar:bloquear;
+d:n
+Mostrar nenhum;
+d: b
+exibição: bloco;
+d: f
+exibição:flexível;
+d:se
+exibição: inline-flex;
+d:eu
+exibição: embutido;
+d:ib
+display: bloco embutido;
+d:li
+exibição: item da lista;
+d:ri
+exibição: execução;
+d:cp
+exibição: compacto;
+d:tb
+exibição: mesa;
+d:itb
+display: tabela embutida;
+d:tbcp
+display: legenda da tabela;
+d: tbcl
+display:coluna da tabela;
+d:tbclg
+display: grupo de colunas de tabela;
+d: tbhg
+display: grupo de cabeçalho de tabela;
+d:tbfg
+display: grupo de rodapé de tabela;
+d:tbr
+exibição: linha da tabela;
+d:tbrg
+display: grupo de linhas de tabela;
+d:tbc
+display: célula-tabela;
+d:rb
+exibição: rubi;
+d:rbb
+exibição: base de rubi;
+d:rbbg
+exibição: grupo base-ruby;
+d:rbt
+display: texto-rubi;
+d:rbtg
+display: grupo de texto Ruby;
+v
+visibilidade:escondido;
+v:v
+visibilidade:visível;
+v:h
+visibilidade:oculto;
+v:c
+visibilidade:colapso;
+ah
+transbordar:escondido;
+ah:v
+estouro:visível;
+ah: h
+estouro: oculto;
+ah:s
+estouro:rolar;
+ov:a
+estouro:automático;
+ovx
+estouro-x:escondido;
+ovx:v
+overflow-x:visível;
+ovx:h
+overflow-x: oculto;
+ovx:s
+overflow-x:rolar;
+ovx:a
+estouro-x:auto;
+ovo
+estouro-y:escondido;
+ovy:v
+estouro-y:visível;
+ovy: h
+overflow-y: oculto;
+ovy:s
+estouro-y:rolar;
+ovy:a
+estouro-y:auto;
+tudo bem
+estilo overflow:Barra de rolagem;
+ovs:a
+estilo overflow:auto;
+ovs:s
+estilo overflow: barra de rolagem;
+ovs:p
+estilo overflow:panner;
+ovs:m
+estilo overflow: mover;
+ovs:mq
+estilo overflow: letreiro;
+zoológico, zm
+ampliar:1;
+CP
+grampo:;
+cp:a
+clipe:automático;
+cp:r
+clipe: reto (principal certo fundo esquerda);
+rsz
+redimensionar:;
+rsz:n
+redimensionar: nenhum;
+rsz:b
+redimensionar: ambos;
+rsz:h
+redimensionar:horizontal;
+rsz:v
+redimensionar:vertical;
+cur
+cursor:${ponteiro};
+cur: um
+cursor:automático;
+coalhada
+cursor: padrão;
+cur:c
+cursor: mira;
+cur:ha
+cursor:mão;
+cur: ele
+cursor:ajuda;
+cur: m
+cursor:mover;
+cur:p
+cursor:ponteiro;
+atual:t
+cursor:texto;
+Margem e preenchimento
+eu
+margem:;
+eu: uma
+margem:automático;
+mt
+margem superior:;
+mt:a
+margem superior:auto;
+senhor
+margem direita:;
+senhor: um
+margem direita:auto;
+MB
+margem inferior:;
+mb:a
+margem inferior:auto;
+ml
+margem esquerda:;
+ml:a
+margem esquerda:auto;
+p
+preenchimento:;
+ponto
+preenchimento superior:;
+pr
+preenchimento à direita:;
+pb
+fundo de preenchimento:;
+por favor
+preenchimento à esquerda:;
+Dimensionamento de caixa
+bxz
+dimensionamento da caixa:caixa de fronteira;
+bxz:cb
+dimensionamento de caixa: caixa de conteúdo;
+bxz:bb
+dimensionamento de caixa: caixa de borda;
+bxsh
+Sombra da caixa:inserirhoff voff borrão cor;
+bxsh:r
+Sombra da caixa:inserirhoff voff borrão espalharrgb(0,0,0);
+bxsh:ra
+Sombra da caixa:inserirh v borrão espalharrgb(0,0,0, .5);
+bxsh:n
+sombra da caixa: nenhum;
+c
+largura:;
+e: um
+largura:automático;
+h
+altura:;
+h:uma
+altura:automático;
+vó
+largura máxima:;
+vó:n
+largura máxima: nenhuma;
+mãe
+altura máxima:;
+mãe: n
+altura máxima: nenhuma;
+miw
+largura mínima:;
+mih
+altura mínima:;
+Fonte
+f
+Fonte:;
+f+
+Fonte:1h Arial, sem serifa;
+boa noite
+espessura da fonte:;
+Fw:n
+peso da fonte:normal;
+fw:b
+intensidade da fonte: Negrito;
+fw:br
+peso da fonte: mais ousado;
+fw:lr
+peso da fonte: mais leve;
+fs
+estilo da fonte:${itálico};
+fs:n
+estilo da fonte: normal;
+fs:eu
+estilo da fonte: itálico;
+fs:o
+estilo da fonte: oblíquo;
+fv
+variante de fonte:;
+fv:n
+variante de fonte:normal;
+fv:sc
+variante de fonte: versalete;
+fz
+tamanho da fonte:;
+fza
+ajuste do tamanho da fonte:;
+fza:n
+ajuste de tamanho da fonte: nenhum;
+aff
+família de fontes:;
+aff:s
+família de fontes: serif;
+aff:ss
+família de fontes: sans-serif;
+aff:c
+família de fontes:cursiva;
+aff:f
+família de fontes:fantasia;
+aff:m
+família de fontes:monoespaçado;
+ff:a
+família de fontes: Arial, "Helvetica Neue", Helvetica, sans-serif;
+aff:t
+família de fontes: "Times New Roman", Times, Baskerville, Georgia, serif;
+aff:v
+família de fontes: Verdana, Geneva, sem serifa;
+fef
+efeito de fonte:;
+fef:n
+efeito de fonte: nenhum;
+fef:por exemplo
+efeito de fonte: gravar;
+fef:eb
+efeito de fonte: relevo;
+fef:o
+efeito de fonte: contorno;
+feminino
+ênfase da fonte:;
+femp
+posição de ênfase da fonte:;
+femp:b
+posição de ênfase da fonte: antes;
+femp:a
+posição de ênfase da fonte: depois;
+mulheres
+estilo de ênfase de fonte:;
+feminino:n
+estilo de ênfase da fonte: nenhum;
+fems:ac
+estilo de ênfase da fonte: acento;
+fems:dt
+estilo de ênfase da fonte: ponto;
+mulheres:c
+estilo de ênfase da fonte: círculo;
+fems:ds
+estilo de ênfase da fonte: disco;
+sms
+fonte suave:;
+fsm:a
+fonte suave:auto;
+sm:n
+fonte suave: nunca;
+fsm: ah
+fonte suave: sempre;
+primeiro
+alongamento da fonte:;
+primeiro:n
+alongamento da fonte: normal;
+fst:uc
+font-stretch:ultra-condensado;
+primeiro:ec
+font-stretch:extra-condensado;
+primeiro:c
+estiramento de fonte: condensado;
+primeiro:sc
+estiramento de fonte: semi-condensado;
+primeiro:se
+font-stretch:semi-expandido;
+primeiro:e
+estiramento de fonte: expandido;
+primeiro: ee
+font-stretch:extra-expandido;
+primeiro:eu
+font-stretch:ultra-expandido;
+Texto
+vai
+alinhamento vertical:principal;
+va: e aí
+alinhamento vertical: super;
+cuba
+alinhamento vertical: topo;
+va: tt
+alinhamento vertical: topo do texto;
+va:m
+alinhamento vertical: meio;
+va: bl
+alinhamento vertical: linha de base;
+va:b
+alinhamento vertical: inferior;
+va: tb
+alinhamento vertical: fundo do texto;
+va:sub
+alinhamento vertical:sub;
+ta
+alinhamento de texto:esquerda;
+ta: eu
+alinhamento de texto: esquerda;
+ta:c
+alinhamento de texto:centro;
+alcatrão
+alinhamento de texto: certo;
+ta: j
+alinhamento de texto: justificar;
+primeiro
+alinhamento de texto por último:;
+tal:um
+alinhamento de texto-último:auto;
+alto
+alinhamento de texto-último:esquerda;
+talco
+alinhamento de texto-último:centro;
+tal:r
+alinhamento de texto por último: à direita;
+td
+decoração de texto:nenhum;
+td:n
+decoração de texto: nenhum;
+td: você
+decoração de texto: sublinhado;
+td:o
+decoração de texto:overline;
+td:eu
+decoração de texto:line-through;
+você
+ênfase no texto:;
+dez
+ênfase no texto: nenhuma;
+você:ac
+ênfase do texto: acento;
+te:dt
+ênfase no texto: ponto;
+você:c
+ênfase do texto: círculo;
+te:ds
+ênfase do texto:disco;
+você:b
+ênfase do texto: antes;
+chá
+ênfase do texto:depois;
+º
+altura do texto:;
+isso: um
+altura do texto:auto;
+isso: f
+altura do texto:tamanho da fonte;
+isso:t
+altura do texto: tamanho do texto;
+isso:m
+altura do texto: tamanho máximo;
+você
+recuo do texto:;
+ti:-
+recuo do texto:-9999px;
+tj
+justificar texto:;
+tj:a
+justificar texto:auto;
+tj:eu
+justificar texto: entre palavras;
+tj:ii
+justificar texto: interideógrafo;
+tj:ic
+justificar texto: entre clusters;
+tj:d
+justificar texto: distribuir;
+tj: k
+justificar texto:kashida;
+tj:t
+justificar texto:tibetano;
+para
+esboço do texto:;
+para +
+esboço do texto:0 0 #000;
+tonelada
+esboço do texto: nenhum;
+tr
+substituição de texto:;
+tr:n
+substituição de texto: nenhum;
+tt
+transformação de texto:maiúsculas;
+tt:n
+transformação de texto: nenhum;
+tt:c
+transformação de texto: maiúscula;
+tt:você
+transformação de texto: maiúsculas;
+tt:eu
+transformação de texto: minúsculas;
+dois
+quebra de texto:;
+dois:n
+quebra de texto: normal;
+dois: não
+quebra de texto: nenhum;
+dois: você
+quebra de texto: irrestrito;
+dois:s
+quebra de texto: suprimir;
+isso
+sombra de texto:hoff voff borrão #000;
+tsh:r
+sombra de texto:h v borrãorgb(0,0,0);
+tsh:ra
+sombra de texto:h v borrãorgb(0,0,0, .5);
+tsh+
+sombra de texto:0 0 0 #000;
+tsh:n
+sombra de texto: nenhum;
+eu
+altura da linha:;
+É
+espaçamento entre letras:;
+lts-n
+espaçamento entre letras:normal;
+o que
+espaço em branco:;
+o que:n
+espaço em branco:normal;
+o que: p
+espaço em branco: pré;
+o que: agora
+espaço em branco:nowrap;
+o que: pw
+espaço em branco:pré-embrulho;
+o que:pl
+espaço em branco: pré-linha;
+o que
+colapso de espaço em branco:;
+o que:n
+colapso de espaço em branco: normal;
+o que:k
+colapso de espaço em branco: manter tudo;
+o que: eu
+colapso de espaço em branco: solto;
+o que:bs
+colapso de espaço em branco: quebra estrito;
+o que: ba
+colapso de espaço em branco: quebrar tudo;
+wob
+quebra de palavras:;
+wob: n
+quebra de palavra:normal;
+wob:k
+quebra de palavras: manter tudo;
+wob: ba
+quebra de palavras: quebrar tudo;
+ai
+espaçamento entre palavras:;
+uau
+quebra de linha:;
+uau: nm
+quebra de linha:normal;
+uau: n
+quebra de linha: nenhum;
+uau: você
+quebra de linha: irrestrito;
+uau: é
+quebra de linha: suprimir;
+uau:b
+quebra de linha: quebra de palavra;
+Fundo
+obrigado
+fundo:#000;
+bg+
+fundo:#fffurl()0 0 sem repetição;
+bg:n
+histórico: nenhum;
+bgc
+cor de fundo:#aff;
+bgc:t
+cor de fundo: transparente;
+bgi
+imagem de fundo:url();
+bgi:n
+imagem de fundo: nenhuma;
+bgr
+fundo de repetição:;
+bgr:n
+repetição em segundo plano: sem repetição;
+bgr:x
+repetição em segundo plano: repetição-x;
+bgr:y
+repetição de fundo: repetição-y;
+bgr:sp
+repetição de fundo: espaço;
+bgr:rd
+repetição de fundo: redondo;
+grande
+anexo de fundo:;
+bga:f
+anexo de fundo: fixo;
+bga:s
+anexo de fundo:rolar;
+bgp
+posição de fundo:0 0;
+bgpx
+posição de fundo-x:;
+bgpy
+posição de fundo-y:;
+bgbk
+quebra de fundo:;
+bgbk:bb
+quebra de fundo: caixa delimitadora;
+bgbk:eb
+quebra de fundo: cada caixa;
+bgbk:c
+quebra de fundo: contínua;
+bgcp
+clipe de fundo:caixa de preenchimento;
+bgcp:bb
+clipe de fundo: caixa de borda;
+bgcp:pb
+clipe de fundo: caixa de preenchimento;
+bgcp:cb
+clipe de fundo: caixa de conteúdo;
+bgcp:nc
+clipe de fundo: sem clipe;
+bgo
+origem do plano de fundo:;
+bgo:pb
+origem do plano de fundo: caixa de preenchimento;
+bgo:bb
+origem do plano de fundo: caixa de borda;
+bgo:cb
+origem de fundo: caixa de conteúdo;
+bgsz
+tamanho do plano de fundo:;
+bgsz:a
+tamanho do plano de fundo:automático;
+bgsz:ct
+tamanho do plano de fundo: contém;
+bgsz:cv
+tamanho do fundo:capa;
+Cor
+c
+cor:#000;
+c:r
+cor:rgb(0,0,0);
+c:ra
+cor: rgb (0,0,0, .5);
+operação
+opacidade:;
+Conteúdo gerado
+cnt
+contente:'';
+cnt:n, ct:n
+conteúdo:normal;
+cnt:oq, ct:oq
+conteúdo: aspas abertas;
+cnt:noq, ct:noq
+conteúdo: sem aspas abertas;
+cnt:cq, ct:cq
+conteúdo: aspas fechadas;
+cnt:ncq, ct:ncq
+conteúdo: sem aspas fechadas;
+cnt:a, ct:a
+conteúdo:attr();
+cnt:c, ct:c
+conteúdo: contador ();
+cnt:cs, ct:cs
+conteúdo: contadores ();
+ct
+contente:;
+q
+citações:;
+p:n
+citações:nenhuma;
+q:ru
+aspas:'\00AB' '\00BB' '\201E' '\201C';
+q:en
+citações:'\201C' '\201D' '\2018' '\2019';
+coi
+contra-incremento:;
+cor
+contra-reset:;
+Contorno
+olá
+contorno:;
+ol:n
+esboço: nenhum;
+olá
+deslocamento de contorno:;
+velho
+largura do contorno:;
+olá: tn
+largura do contorno:fino;
+olá: m
+largura do contorno:médio;
+olá: tc
+largura do contorno: grosso;
+olá
+estilo de contorno:;
+olá: n
+estilo de contorno: nenhum;
+ols:dt
+estilo de contorno: pontilhado;
+ols:ds
+estilo de contorno: tracejado;
+olá:s
+estilo de contorno: sólido;
+ols:db
+estilo de contorno: duplo;
+olá:g
+estilo de contorno: groove;
+ols:r
+estilo de contorno: cume;
+olá: eu
+estilo de contorno:inserção;
+olá: o
+estilo de contorno: início;
+olc
+cor do contorno:#000;
+olc:eu
+cor do contorno:inverter;
+Tabelas
+tbl
+layout da tabela:;
+tbl:a
+layout da tabela:auto;
+tbl:f
+layout da tabela: fixo;
+cps
+lado da legenda:;
+cps: t
+lado da legenda: topo;
+cps:b
+lado da legenda: inferior;
+CE
+células vazias:;
+ec:s
+células vazias: mostrar;
+ec:h
+células vazias: ocultar;
+Fronteira
+bd
+fronteira:;
+bd+
+fronteira:1px sólido #000;
+bd:n
+fronteira:nenhuma;
+bdbk
+quebra de fronteira:fechar;
+bdbk:c
+quebra de fronteira: fechar;
+bdcl
+colapso da borda:;
+bdcl:c
+colapso de borda: colapso;
+bdcl:s
+colapso da borda: separado;
+bdc
+Cor da borda:#000;
+bdc:t
+cor da borda: transparente;
+bdi
+imagem-borda:url();
+bdi:n
+imagem de borda: nenhuma;
+bdti
+imagem-borda superior:url();
+bdti:n
+border-top-image:nenhum;
+bdri
+imagem-borda-direita:url();
+bdri:n
+imagem-borda-direita:nenhuma;
+bdbi
+imagem-borda-inferior:url();
+bdbi:n
+imagem de borda inferior: nenhuma;
+bdli
+imagem-borda esquerda:url();
+bdli:n
+borda-esquerda-imagem:nenhuma;
+bdci
+imagem-borda-canto:url();
+bdci:n
+imagem de canto de borda: nenhum;
+bdci:c
+imagem-borda-canto:continuar;
+bdtli
+imagem-borda superior esquerda:url();
+bdtli:n
+borda superior esquerda da imagem: nenhuma;
+bdtli:c
+borda superior esquerda da imagem: continuar;
+bdtri
+imagem-borda superior direita:url();
+bdtri:n
+imagem da borda superior direita: nenhuma;
+bdtri:c
+imagem na borda superior direita: continuar;
+bdbri
+imagem-borda-inferior-direita:url();
+bdbri:n
+imagem-borda-inferior-direita:nenhuma;
+bdbri:c
+borda inferior direita da imagem: continuar;
+bdbli
+imagem-borda-inferior-esquerda:url();
+bdbli:n
+imagem-borda inferior esquerda: nenhum;
+bdbli:c
+borda inferior esquerda da imagem: continuar;
+bdf
+ajuste de borda:repita;
+bdf:c
+ajuste de borda: clipe;
+bdf:r
+ajuste de borda:repetir;
+bdf:sc
+ajuste de borda:escala;
+bdf:st
+ajuste de borda: esticar;
+bdf: ai
+ajuste de borda: substituir;
+bdf:de
+ajuste de borda: estouro;
+bdf:sp
+ajuste de borda: espaço;
+bdlen
+comprimento da borda:;
+bdlen:a
+comprimento da borda:automático;
+bdsp
+espaçamento de borda:;
+bds
+estilo de borda:;
+bds:n
+estilo de borda: nenhum;
+bds:h
+estilo de borda: oculto;
+bds:dt
+estilo de borda: pontilhado;
+bds:ds
+estilo de borda: tracejado;
+bds:s
+estilo de borda: sólido;
+bds:db
+estilo de borda: duplo;
+bds:dtds
+estilo de borda: ponto-traço;
+bds:dtdtds
+estilo de borda: ponto-ponto-traço;
+bds:w
+estilo de borda: onda;
+bds:g
+estilo de borda:groove;
+bds:r
+estilo de borda: cume;
+bds: eu
+estilo de borda:inserção;
+bds:o
+estilo de borda: início;
+namorado
+largura da borda:;
+bdt, bt
+borda superior:;
+bdt+
+borda superior:1px sólido #000;
+bdt: n
+borda superior: nenhum;
+btw
+largura superior da borda:;
+bdts
+estilo border-top:;
+bdts:n
+estilo border-top: nenhum;
+bdtc
+cor da borda superior:#000;
+bdtc: t
+cor da borda superior: transparente;
+bdr, br
+borda direita:;
+quarto+
+borda direita:1px sólido #000;
+quarto:n
+fronteira direita: nenhum;
+dormitório
+largura da borda à direita:;
+quarto
+estilo borda direita:;
+primeiro:n
+estilo de borda direita: nenhum;
+bdrc
+cor da borda direita:#000;
+bdrc:t
+cor da borda direita: transparente;
+bdb, bb
+borda inferior:;
+bdb+
+borda inferior:1px sólido #000;
+bdb:n
+borda inferior: nenhum;
+bbw
+largura inferior da borda:;
+bds
+estilo borda inferior:;
+bds:n
+estilo de borda inferior: nenhum;
+bdbc
+cor da borda inferior:#000;
+bdbc:t
+cor da borda inferior: transparente;
+bdl, bl
+borda esquerda:;
+bdl+
+borda esquerda:1px sólido #000;
+bdl:n
+borda esquerda: nenhum;
+bdlw
+largura da borda esquerda:;
+bdls
+estilo borda esquerda:;
+bdls:n
+estilo de borda esquerda: nenhum;
+bdlc
+cor da borda esquerda:#000;
+bdlc:t
+cor da borda esquerda: transparente;
+bdrs
+raio da fronteira:;
+bdtrrs
+raio superior direito da borda:;
+bdtlrs
+raio superior esquerdo da borda:;
+bdbrrs
+raio inferior direito da borda:;
+bdblrs
+raio inferior esquerdo da borda:;
+Listas
+lis
+estilo de lista:;
+lis:n
+estilo de lista: nenhum;
+ceceio
+posição de estilo de lista:;
+ceceio: eu
+posição de estilo de lista: dentro;
+ceceio: o
+posição de estilo de lista:fora;
+lista
+tipo de estilo de lista:;
+lista:n
+tipo de estilo de lista: nenhum;
+lista:d
+tipo de estilo de lista: disco;
+lista: c
+tipo de estilo de lista: círculo;
+lista:s
+tipo de estilo de lista: quadrado;
+lista: dc
+tipo de estilo de lista:decimal;
+lista:dclz
+tipo de estilo de lista: decimal-inicial-zero;
+lista:lr
+tipo de estilo de lista: romano inferior;
+lista: você
+tipo de estilo de lista: romanizado superior;
+lisi
+imagem em estilo de lista:;
+lisi:n
+imagem de estilo de lista: nenhum;
+Imprimir
+pgbb
+quebra de página antes:;
+pgbb:au
+quebra de página antes:auto;
+pgbb:al
+quebra de página antes: sempre;
+pgbb:eu
+quebra de página antes: esquerda;
+pgbb:r
+quebra de página antes: certo;
+pgbi
+quebra de página dentro:;
+pgbi:au
+quebra de página dentro:auto;
+pgbi:av
+quebra de página dentro: evitar;
+pgba
+quebra de página depois:;
+pgba:au
+quebra de página após:auto;
+pgba:al
+quebra de página depois: sempre;
+pgba:l
+quebra de página depois: esquerda;
+pgba:r
+quebra de página depois: certo;
+orp
+órfãos:;
+largura
+viúvas:;
+Outros
+!
+!importante
+@f
+@font-face {família de fontes:; src:url(|); }
+@f+
+@font-face {família de fontes: 'NomeDaFonte'; src:url('Nome do arquivo.eot'); src:url('Nome do arquivo.eot?#iefix') formato('embedded-opentype'), url('Nome do arquivo.woff') formato('woff'), url('Nome do arquivo.ttf') formato('truetype'), url('Nome do arquivo.svg#NomeDaFonte') formato('svg'); estilo de fonte:normal; espessura da fonte:normal; }
+@i, @importar
+@importar url();
+@kf
+@-webkit-quadros-chaveidentificador{
+    de{}
+    para{} } @-o-quadros-chaveidentificador{
+    de{}
+    para{} } @-moz-quadros-chaveidentificador{
+    de{}
+    para{} } @keyframesidentificador{
+    de{}
+    para{} }
+@m, @mídia
+@meios de comunicaçãotela{
+    
+}
+ac
+alinhar conteúdo:;
+ac:c
+alinhar-conteúdo:centro;
+ac:fe
+alinhar-conteúdo:flex-end;
+ac:fs
+alinhar-conteúdo:flex-start;
+ac:s
+alinhar-conteúdo: esticar;
+ac:sa
+alinhar-conteúdo: espaço ao redor;
+ac:sb
+alinhar-conteúdo:espaço entre;
+ai
+alinhar itens:;
+ai:b
+alinhar itens: linha de base;
+ai:c
+alinhar itens: centro;
+ai:fe
+alinhar itens:flex-end;
+ai:fs
+alinhar itens:flex-start;
+ai:s
+alinhar itens: esticar;
+anime
+animação:;
+animação
+animação:nome duração função de temporização atraso contagem de iterações direção modo de preenchimento;
+animedel
+atraso de animação:tempo;
+animar
+direção de animação:normal;
+animar:a
+direção de animação:alternativa;
+animedir:ar
+direção de animação: reverso alternativo;
+animar:n
+direção de animação:normal;
+animedir:r
+direção de animação: reverso;
+animadur
+duração da animação:0é;
+animafm
+modo de preenchimento de animação:ambos;
+animafm:b
+modo de preenchimento de animação: para trás;
+animfm:bt, animfm:bh
+modo de preenchimento de animação: ambos;
+animafm:f
+modo de preenchimento de animação: encaminha;
+anímico
+contagem de iterações de animação:1;
+anímico: eu
+contagem de iterações de animação: infinito;
+animação
+nome da animação:nenhum;
+animações
+estado de reprodução da animação:correndo;
+animações:p
+animação-play-state:pausado;
+animações:r
+animação-play-state:em execução;
+animação
+função de tempo de animação:linear;
+animatf:cb
+função de tempo de animação:cubic-bezier(0,1,0,7,1,0,0,1);
+animatf:e
+função de tempo de animação: facilidade;
+animtf:ei
+função de tempo de animação: facilidade;
+animatf:eio
+função de tempo de animação: facilidade de entrada;
+animatf:eo
+função de tempo de animação: facilidade;
+animatf:l
+função de tempo de animação: linear;
+aplicativo
+aparência:${nenhum};
+como
+alinhar-se:;
+como um
+alinhar-se:auto;
+como: b
+alinhar-se: linha de base;
+como:c
+alinhar-se:centro;
+como:fe
+alinhar-se:flex-end;
+como:fs
+alinhar-se:flex-start;
+bunda
+alinhar-se: esticar;
+melhor amigo
+visibilidade backface:;
+melhor amigo:h
+visibilidade backface: oculto;
+bom dia:v
+backface-visibilidade:visível;
+bg: ou seja
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='x.png',sizingMethod='cortar');
+cm
+/*${filho} */
+calma
+colunas:;
+colmc
+contagem de colunas:;
+colmf
+preenchimento de coluna:;
+colmg
+lacuna de coluna:;
+colmr
+regra da coluna:;
+colmrc
+cor da regra da coluna:;
+colmrs
+estilo de regra de coluna:;
+colmrw
+largura da regra da coluna:;
+colméias
+extensão da coluna:;
+calma
+largura da coluna:;
+d:ib+
+display: bloco embutido; *exibição: em linha; *zoom: 1;
+efeitos
+flexível:;
+FXB
+base flexível:;
+fxd
+direção flexível:;
+fxd:c
+direção flexível:coluna;
+fxd:cr
+direção flexível: coluna reversa;
+fxd:r
+direção flexível: linha;
+fxd:rr
+direção flexível: linha reversa;
+efeitos especiais
+fluxo flexível:;
+fxg
+crescimento flexível:;
+fxsh
+flex-encolher:;
+FXW
+envoltório flexível:;
+fxw:n
+flex-wrap:nowrap;
+fxw:w
+flex-wrap:envoltório;
+fxw:wr
+flex-wrap:wrap-reverso;
+jc
+justificar-conteúdo:;
+jc:c
+justificar-conteúdo:centro;
+jc:fe
+justificar-conteúdo:flex-end;
+jc:fs
+justificar-conteúdo:flex-start;
+jc:sa
+justificar-conteúdo: espaço ao redor;
+jc:sb
+justificar-conteúdo:espaço entre;
+março
+resolução máxima:resolução;
+amor
+resolução mínima:resolução;
+operação +
+opacidade:; filtro: alfa(opacidade=);
+op: ou seja
+filter:progid:DXImageTransform.Microsoft.Alpha(Opacidade=100);
+op: senhora
+-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacidade=100)';
+ordem
+ordem:;
+ori
+orientação:;
+ori:eu
+orientação:paisagem;
+ori:p
+orientação:retrato;
+tov
+estouro de texto:${reticências};
+tov:c
+estouro de texto: clipe;
+tov:e
+estouro de texto: reticências;
+trf
+transformar:;
+trf:r
+transformar: girar (ângulo);
+trf:rx
+transformar: girarX(ângulo);
+trf:ry
+transformar: girarY(ângulo);
+trf:rz
+transformar: girarZ(ângulo);
+trf:sc
+transformar: escala(x,sim);
+trf:sc3
+transformar: escala3d(x,sim,z);
+trf:scx
+transformar: escalaX(x);
+trf:scy
+transformar: escalaY(sim);
+trf:scz
+transformar: escalaZ(z);
+trf:skx
+transformar: inclinaçãoX(ângulo);
+trf:céu
+transformação: inclinaçãoY(ângulo);
+trf: t
+transformar: traduzir(x,sim);
+trf:t3
+transformar: traduzir3d(tx,ty,tz);
+trf:tx
+transformar: traduzirX(x);
+trf:ty
+transformar: traduzirY(sim);
+trf:tz
+transformar: traduzirZ(z);
+trfo
+origem da transformação:;
+trfs
+estilo de transformação:preservar-3d;
+trs
+transição:suporte tempo;
+trsde
+atraso de transição:tempo;
+trsdu
+duração da transição:tempo;
+trsp
+propriedade de transição:suporte;
+trstf
+função de tempo de transição:tfunc;
+nós
+seleção de usuário:${none};
+wfsm
+-webkit-font-smoothing:${antialiased};
+wfsm:a
+-webkit-font-smoothing:antialiased;
+wfsm:n
+-webkit-font-smoothing:nenhum;
+wfsm:s, wfsm:sa
+-webkit-font-smoothing:subpixel-antialiased;
+uh
+modo de escrita:lr-tb;
+wm:btl
+modo de escrita:bt-lr;
+wm:btr
+modo de escrita:bt-rl;
+wm: lrb
+modo de escrita:lr-bt;
+wm: lrt
+modo de escrita:lr-tb;
+wm:rlb
+modo de escrita:rl-bt;
+wm:rlt
+modo de escrita:rl-tb;
+wm:tbl
+modo de escrita:tb-lr;
+wm:tbr
+modo de escrita:tb-rl;
+XSL
+tmatch, tm
+<xsl:template match=""modo=""></xsl:template>
+nome, tn
+<xsl:nome do modelo=""></xsl:template>
+chamar
+<xsl:nome do modelo de chamada=""/>
+aplicativo
+<xsl:apply-templates select=""modo=""/>
+API
+<xsl:apply-importações />
+criança levada
+<xsl:importar href=""/>
+Inc.
+<xsl:include href=""/>
+CH
+<xsl:escolha></xsl:escolha>
+xsl: quando, o que
+<xsl:quando teste=""></xsl:quando>
+não
+<xsl:caso contrário></xsl:caso contrário>
+se
+<xsl:se teste=""></xsl:se>
+par
+<xsl:param nome=""></xsl:param>
+pare
+<xsl:param nome=""selecione=""/>
+var
+<xsl:nome da variável=""></xsl:variável>
+vare
+<xsl:nome da variável=""selecione=""/>
+wp
+<xsl:with-param nome=""selecione=""/>
+chave
+<xsl:nome da chave=""correspondência=""usar=""/>
+elemento
+<xsl:nome do elemento=""></xsl:elemento>
+atributo
+<xsl:nome do atributo=""></xsl:atributo>
+atributos
+<xsl:nome do conjunto de atributos=""></xsl:conjunto de atributos>
+CP
+<xsl:copiar seleção=""/>
+co
+<xsl:cópia de select=""/>
+valor
+<xsl:valor-de select=""/>
+cada um, por
+<xsl:for-each select=""></xsl:for-each>
+texto
+<xsl:texto></xsl:texto>
+com
+<xsl:comentar></xsl:comment>
+mensagem
+<xsl:message termina="não"></xsl:mensagem>
+cair
+<xsl:fallback></xsl:fallback>
+número
+<xsl:valor numérico=""/>
+nome
+<namespace-alias stylesheet-prefix=""prefixo-resultado=""/>
+pres
+<xsl:preserve-espaço elementos=""/>
+faixa
+<xsl:elementos strip-space=""/>
+processo
+<xsl:nome da instrução de processamento=""></xsl:instrução de processamento>
+organizar
+<xsl:classificar select=""ordem=""/>
+escolha+
+Alias ​​de xsl:escolha>xsl:quando+xsl:caso contrário
+
+<xsl:escolha> <xsl:quando teste=""></xsl:quando> <xsl:caso contrário></xsl:caso contrário> </xsl:choose>
+xsl
+Alias ​​de !!!+xsl:stylesheet[versão=1.0 xmlns:xsl=http://www.w3.org/1999/XSL/Transform]>{ |}
+
+<?xml version="1.0" encoding="UTF-8"?> <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"></xsl:folha de estilo>
+!!!
+<?xml versão="1.0" codificação="UTF-8"?>

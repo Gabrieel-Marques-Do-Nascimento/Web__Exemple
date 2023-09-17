@@ -1,0 +1,17 @@
+// Coloque seus trechos de espaço de trabalho Web__Exemple aqui. Cada snippet é definido sob um nome de snippet e possui escopo, prefixo, corpo e
+// descrição. Adicione IDs separados por vírgula dos idiomas onde o snippet é aplicável no campo de escopo. Se o escopo
+// for deixado em branco ou omitido, o snippet será aplicado a todos os idiomas. O prefixo é o que é
+// usado para acionar o snippet e o corpo será expandido e inserido. As variáveis possíveis são:
+// $1, $2 para paradas de tabulação, $0 para a posição final do cursor e ${1:label}, ${2:another} para espaços reservados.
+// Espaços reservados com os mesmos ids são conectados.
+// Exemplo:
+"Print to console": {
+	"scope": "css,html",   // tipo 
+ 	"prefix": "color",  //atalho 
+		"body": [
+			"background: $1",  // $num define a ordem tipo curso comessa no $1 tab vai pro $2
+		"$2"              // clicando
+		],
+		"description": "Log output to console" // descricao pra q serve
+	 }
+}
