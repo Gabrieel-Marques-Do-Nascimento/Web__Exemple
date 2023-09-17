@@ -15,7 +15,7 @@ function sum(...args) {
     }
     return total
 }
-console.log('TOTAL', sum( 6,2,4,3,7));
+console.log('TOTAL');
 
 
 
