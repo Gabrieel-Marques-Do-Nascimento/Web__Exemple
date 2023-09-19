@@ -1,1 +1,4 @@
 rum ==   f5
+
+comentar =  ctrl k +  ctrl c
+descomentar =  ctrl k +  ctrl u
