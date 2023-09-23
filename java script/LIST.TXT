@@ -1,0 +1,197 @@
+x
+JS
+n
+Number()
+
+JavaScript
+PROPERTI
+
+@.POSITIVO_INFINITY + 00
+D. NEGATIVE_INFINITY-Co equivalente
+Métodos
+.MAX_VALUE maior valor positivo
+.Min_VALUE valor mínimo positivo
+.EPSILON diff entre 1 & menor >1
+.NaN valor não-um-número
+
+
+.toExponential (dec) exp. Notação
+.toFixed(dec) notação de ponto fixo 
+.toPrecision da alteração da precisão (p)
+B.isfinite(n) verificar se o número é finito
+O.isinteger (n) verificar se o número é int.
+B.isNaN(n) verificar se o número é NaN
+S.parselnt(s, radix) string para inteiro
+.parseFloat (s, radix) string para flutuar
+r
+Propriedades
+
+Regexp()
+S. lastindex index inicia regexp global
+.flags sinalizadores activos da regexp actual
+E.global bandeira  g (pesquisar todos os jogos)
+B.ignoreCase flag i (correspondência inferior / superior)
+b
+.multiline bandeira  m (corresponder a várias linhas)
+b
+.bandeira fixa y (procurar a partir do lastindex)
+B. bandeira unicode u (activar unicode feat.)
+.regexp atual da fonte (sem slashs)
+Métodos
+a.exec (str) exec procurar uma correspondência
+B. teste(str) verifique se o regexp corresponde com str
+. qualquer personagem
+\ t tabulador
+\ d dígito [0-9]
+\ R retorno do carro
+\D sem algarismos [*0-9]
+Alimentação em linha
+\ w qualquer caractere alfanumérico [a-Za-z0-9_]
+\ W nenhum caractere alfanumérico [*A-Za-z0-9
+\ S qualquer caractere de espaço (espaço, tabulação, enter...)
+\ S sem espaço char (espaço, tab, enter...)
+\ xn char com código N
+[\b] backspace
+\ uN char com unicode N \ 0 nul char
+[abc] corresponder a qualquer conjunto de caracteres
+[*abc] corresponder a qualquer char. conjunto não fechado
+alb corresponder a ou b
+BOUNDAR
+início da entrada
+\ B limite de palavra de largura zero
+Agrupamento
+S fim da entrada
+\ B limite de largura zero sem palavra
+(x) grupo de captura (?: x) nenhum grupo de captura
+Em referência ao grupo N capturado
+x * precedendo x 0 ou mais vezes (0,)
+x + precedendo x 1 ou mais vezes (1,)
+x? precedendo x 0 ou 1 vezes (0,1)
+x (n) n
+ocorrência de x
+x (n,} Pelo menos n ocorrências de x
+x{n,m} entre n & m ocorrências de
+x (?= y) x (apenas se X for seguido por y)
+×(?!y) x (apenas se x não for seguido por y)
+Linguagem de programação Web
+s
+Fraude
+String()
+equivalente.comprimento tamanho da cadeia
+charAt (índice) char na posição
+S. charcodeat (index) unicode em pos.
+.decharcode (n1, N2...) código para char
+.concat (str1, str2...) combinar texto+
+B. iníciocom (str, tamanho) início da verificação
+B. terminascom (str, tamanho) final de verificação
+E. includes (str, from) include substring?
+nindexOf (str, from) encontrar índice substr
+s. lastindexOf (Str, from)
+.pesquisa (regex) Índice de pesquisa e retorno
+.localeCompare (str, localidade, opções)
+a.correspondência (regex) corresponde a uma string
+.repetir (n) repetir cadeia n vezes
+.substituir (Str regex, newstrifunc)
+.slice (ini, end) str entre ini / end
+s.substr (ini, len) substr de comprimento len
+substring (ini, fim) substr fragmento
+.divisão (set|regex, limit) cadeia de divisão
+.toLowerCase () string para minúsculas
+.toUpperCase () string para maiúsculas
+.trim () remover o espaço do início / fim
+strings de modelo raw () com ${vars}
+D Data()
+Folha
+Métodos
+.Data e hora UTC(y, m, d, h, i, S, ms)
+.agora() carimbo de data / hora da hora atual
+análise (str) converter str em Carimbo de data / hora
+.setTime (ts) definir UNIX
+carimbo de data / hora
+ngetTime () retorna o carimbo de data / hora UNIX
+S. setFullYear(y, m, d) set year (AAAA)
+.setMonth (m, d) definir mês (0-11)
+s. setDate (d) set day (1-31)
+ngetDate () dia de retorno (1-31)
+n getDay () dia da semana de retorno (0-6)
+s. getMonth () mês de retorno (0-11)
+getFullYear () ano de retorno (AAAA)
+getHours () hora de retorno (0-23)
+getMinutes () retorno
+minutos (0-59)
+s. getSeconds () segundos de retorno (0-59)
+s. getMilliseconds () retorna ms (0-999)
+a
+Array()
+.getTimezoneOffset () compensação em minsNaN
+toLocaleDateString(localidade, opções)
+toLocaleTimeString(localidade, opções)
+.toLocaleString(localidade, opções)
+.toUTCString () retorna a data UTC
+.toDateString () data de retorno Americana
+.toTimeString () voltar hora Americana
+.toISOString () retorno ISO8601 data
+S. toJSON () data de retorno pronta para JSON
+S. Comprimento número de elementos
+Métodos
+JS
+.isArray (obj) verifique se a matriz objis
+B. inclui (obj, from) incluir elemento?
+s. indexOf (obj, from) encontrar elem. índice
+s. lastindexOf (obj, from) find from end
+.juntar (sep) juntar elementos c / separador
+a
+.fatia (ini, fim) parte da matriz de retorno
+a
+.concat (obj1, obj2...) retornar matriz Unida
+a. copyWithin (pos, ini, end) elementos de cópia
+.preencher (obj, ini, end) preencher matriz com obj
+a.reverse () inverter a matriz e devolvê-la
+E. classificação(cf(A,b)) matriz de classificação (classificação unicode)
+E. splice (ini, del, o1, o2...) del & add elem
+.entradas () iterar matriz de pares chave / valor
+A. keys () iterar apenas matriz de chaves
+uma matriz de valores () iterar apenas valores
+RETORNO DE CHAMADA PARA CADA MÉTODO
+B. Cada teste(cb (e,i,a), arg) até falso
+B. Alguns(cb(e,i,a), arg) testam até serem verdadeiros
+E. mapa(cb (e,i,a), arg) fazer matriz
+filtro(cb (e,i,a), arg) fazer matriz w / true
+o. encontrar(cb (e,i,a), arg) retornar elem w / true
+.findindex(cb (e,i,a), arg) Índice de retorno
+.forEach(cb (e,i,a), arg) exec para cada
+.reduzir(cb (p,e,i,a), arg) acumulativo
+o. reduceRight(cb (p,e,i,a), arg) a partir do final
+o.pop () remover & devolver o último elemento
+.empurrar (o1, 02...) Adicionar elemento e comprimento de retorno
+o. shift() remover e devolver o primeiro elemento
+.unshift (o1, o2...) Adicionar elemento e retorno len
+.setHours (h, m, S, ms) hora definida (0-23) B booleano ()
+.setMinutes (m, s, ms) set min (0-59) sem Propriedades ou métodos próprios
+n.setSeconds (s, ms) set sec (0-59)
+s. setMilliseconds (ms) set ms (0-999)f
+Função()
+Propriedades
+[1,,2,3]
+olength retorno número de argumentos
+. name retorna o nome da função
+.prototype prototype object
+O. call (newthis, arg1, arg2...) alterar esta
+o. aplicar (newthis, arg1) com matriz args
+o. bind (newthis, arg1, arg2...) func ligado
+nNúmero
+cadeia
+ddate
+(não-um-número)regular
+bboolean (verdadeiro / falso)
+uma matriz
+estática (Ex: Matemática. random())
+função f
+objecto
+indefinido
+disponível apenas no ECMAScript 6
+expresion
+n não estático (ex: nova data ().getDate())
+argumento necessário
+argumento facultativo
+CodeMio
