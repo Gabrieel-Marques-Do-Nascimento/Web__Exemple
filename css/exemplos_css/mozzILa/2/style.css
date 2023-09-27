@@ -1,0 +1,55 @@
+.special {
+  /* class ganha  de seletor*/
+  color: red;
+}
+
+p {
+  color: rgb(197, 48, 7);
+}
+p {
+  /* css e em cascata entao o mais recente e o q vale*/
+  color: #1454d3;
+}
+h1 {
+  /* propriedade     valor*/
+  color: blue;
+}
+.outer {
+  border: 5px solid black;
+}
+
+.box {
+  padding: 10px;
+  width: calc(90% - 30px); /*calc(90% - 30px) 90 porcento menos 30px*/
+  background-color: rebeccapurple;
+  color: white;
+}
+.box {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background-color: rebeccapurple;
+  transform: rotate(0.8turn);
+}
+@import "styles2.css"; /*para importar folha de estilo na css principal*/
+
+body {
+  background-color: pink;
+}
+
+@media (min-width: 600px) {
+  /* se for menor q 600px fundo al se nao vai ser rosa*/
+  body {
+    background-color: blue;
+    padding: 10px 15px 15px 5px; /*  top, right, bottom, left */
+  }
+}
+.exemplo {
+  background-color: red;
+  background-image: url(bg-graphic.png);
+  background-position: 10px 10px;
+  background-repeat: repeat-x;
+  background-scroll: fixed;
+ /* fas o mesmo q asima */  
+  background: red url(bg-graphic.png) 10px 10px repeat-x fixed;
+}
