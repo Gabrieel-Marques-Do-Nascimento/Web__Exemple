@@ -1,0 +1,68 @@
+h1 {
+  color: red;
+}
+/*multiplos elementos com virgula e > para celecionar o element  filho  li filho de ul*/
+p,
+ul > li {
+  color: green;
+  margin-left: 15px;
+}
+li {
+  list-style: decimal; /*square  */
+}
+
+li.special {
+  /*aplica se apenas a li com class special */
+  color: orange;
+  font-weight: bold;
+}
+special {
+  /*aplica se a todos  class special */
+  color: orange;
+  font-weight: bold;
+}
+li em {
+  /* seleciona o em dentro de li*/
+  color: rebeccapurple;
+}
+
+h1 + p {
+  /* estili p q estiver junto de um h1*/
+  font-size: 200%;
+}
+a:link {
+  /* link nao visitado */
+  color: pink;
+}
+a:visited {
+  /* link visitado */
+  color: green;
+}
+a {  /**/  
+  text-decoration: underline;
+}
+a:hover {  /* mouse passar */  
+  text-decoration: none;
+}
+
+body h1 + p .special {
+  color: yellow;
+  background-color: black;
+  padding: 5px;
+}
+
+
+ /* estrutura css */  
+
+
+
+
+
+
+
+
+
+
+
+
+ 
