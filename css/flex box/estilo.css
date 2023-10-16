@@ -1,0 +1,24 @@
+*{
+    margin: 0%;padding: 0%;
+    box-sizing: border-box;
+}
+.flex-contain{
+    /*tem eixo principal e o eixo transversal*/
+    /*flex-box gerencia os filho padão flex-diection row*/
+    display: flex;
+    flex-direction: row;/*define a direção do eixo principal*/
+    /*padrão flex-start  justify content meche no eixo principal*/
+    justify-content: flex-start;
+    /*space-between distribui o espaco mais usado  space-around distribui o espaco praticament igual  space-evenly distribui o espaco igualment  */
+    align-items: stretch;/*eixo tranversal*/
+    /*stretch maior tamanho posivel*/
+    background: yellow;
+    height: 50vh;
+    gap: 30px;/*espaco de cada elemento filho*/
+}
+.flex-item{
+    /*padrão  autura e largura e auto*/
+   
+    background: greenyellow;
+   
+}
