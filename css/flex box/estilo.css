@@ -1,24 +1,88 @@
-*{
-    margin: 0%;padding: 0%;
-    box-sizing: border-box;
+* {
+      margin: 0%;
+      padding: 0%;
+      box-sizing: border-box;
 }
-.flex-contain{
-    /*tem eixo principal e o eixo transversal*/
-    /*flex-box gerencia os filho padão flex-diection row*/
+.flex-contain {
+      /*tem eixo principal e o eixo transversal*/
+      /*flex-box gerencia os filho padão flex-diection row*/
+      display: flex;
+
+      flex-direction: row; /*define a direção do eixo principal*/
+
+      /*padrão flex-start  justify content meche no eixo principal*/
+      justify-content: flex-start;
+      /*space-between distribui o espaco mais usado  space-around distribui o espaco praticament igual  space-evenly distribui o espaco igualment  */
+
+      align-items: baseline; /*eixo tranversal oposto do principal*/
+      /*stretch maior tamanho posivel , start,  center , end , baseline se alinhao na base line da font*/
+
+      flex-wrap: wrap; /*padrão nowrap nao qbrar linha wrap quebrar linha  wrap-reverse*/
+
+      align-content: flex-start; /*alinha  eixo trasversal mesmo propriedades de justify-content*/
+
+      background: yellow;
+      gap: 30px; /*espaco de cada elemento filho*/
+      padding: 30px; /*espaco do pai*/
+
+      flex-flow: row wrap; /* simplifica direction e wrap*/
+      height: 80vh;
+}
+/*filhos*/
+.flex-item {
+      /*padrão  autura e largura e auto*/
+
+      flex-grow: 1; /* padrao 0 se for 1 ou mais os elementos vao ocupar o espaco na proporção igual por linha */
+
+      flex-shrink: 1; /*padrão 1  diminuir a proporção dos elementos se for 0 posibilidade de overflow  = holagem lat */
+      background: greenyellow;
+      
+}
+.flex-item:nth-child(2) {
+   align-self: center;
+      /*    order: 3;  define a ordem do elento no caso  todo sao 1 esse e 2 vai pro final*/
+}
+
+/*   filho podem ser flex tanbem */
+.flex-item:nth-child(1) {
+    height: 200px;
+    flex-grow: 2;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+.flex-item:nth-child(3) {
+
+    align-self: flex-end;/* alinamento do filho*/
+}
+
+.flex-item:last-child {
+    /*   flex-grow: 0;
+      flex-basis: 100%;  tamanho inicial de 100%*/
+      flex: 0 1 100% ;/* grow shrink basis comun definir tu como 1*/
+}
+
+
+.flex-contain-2 {
+    background: green;
+    width: 100%;
+    height: 300px;
     display: flex;
-    flex-direction: row;/*define a direção do eixo principal*/
-    /*padrão flex-start  justify content meche no eixo principal*/
-    justify-content: flex-start;
-    /*space-between distribui o espaco mais usado  space-around distribui o espaco praticament igual  space-evenly distribui o espaco igualment  */
-    align-items: stretch;/*eixo tranversal*/
-    /*stretch maior tamanho posivel*/
-    background: yellow;
-    height: 50vh;
-    gap: 30px;/*espaco de cada elemento filho*/
+    justify-content: center;
+    align-items: center;
 }
-.flex-item{
-    /*padrão  autura e largura e auto*/
-   
-    background: greenyellow;
-   
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
