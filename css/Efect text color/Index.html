@@ -10,27 +10,64 @@
       body {
         background: black;
       }
-      h1 {
+      .like {
         -webkit-text-stroke: 0.5vh #fff; /* borda branca do texto*/
         font-size: 30vw;
         font-weight: bold;
         text-align: center;
-        text-transform: uppercase; /* texto maiusculo*/
-        background: url("images (15).jpeg");
+        text-transform: uppercase; /* texto maiusculo
+        
+        background: url("images (15).jpeg");*/
+        
+        background-image: linear-gradient(78deg ,green 1%, blue);
         color: #ffffff00; /* cor de texto transparent*/
-        background-clip: text;
-        -webkit-background-clip: text;
-        animation: text 10s ease alternate infinite;
+        
+        background-clip: text; /* plano de fundo e cortado ao redor do texto*/
+        -webkit-background-clip: text;/* plano de fundo e cortado ao redor do texto*/
+        
+        animation: text 3s ease-in-out .5s  infinite;
       }
-      @keyframes text {
-        from {
-          background-position: 0% 50%;
+            @keyframes text {
+        1% {
+          background-clip: text; /* plano de fundo e cortado ao redor do texto*/
+        -webkit-background-clip: text;/* plano de fundo e cortado ao redor do texto*/
+        
+         background-image: linear-gradient(78deg ,green 15%, blue ); 
+         /* background-position: 0% 50%; */
         }
-        to {
-          background-position: 100% 50%;
+        20% {
+            background-clip: text; /* plano de fundo e cortado ao redor do texto*/
+        -webkit-background-clip: text;/* plano de fundo e cortado ao redor do texto*/
+        background-image: linear-gradient(78deg ,green 30%, blue ); 
+        
+        /*  background-position: 100% 50%; */
         }
+        40%{
+          background-clip: text; /* plano de fundo e cortado ao redor do texto*/
+        -webkit-background-clip: text;/* plano de fundo e cortado ao redor do texto*/
+        background-image: linear-gradient(78deg, #aecdc8 1%,green 45%, blue ); 
+        
+        }
+        60%{
+          background-clip: text; /* plano de fundo e cortado ao redor do texto*/
+        -webkit-background-clip: text;/* plano de fundo e cortado ao redor do texto*/
+        background-image: linear-gradient(78deg, #aecdc8 10%,green 60%, blue ); 
+        }
+        
+        80%{
+          background-clip: text; /* plano de fundo e cortado ao redor do texto*/
+        -webkit-background-clip: text;/* plano de fundo e cortado ao redor do texto*/
+        background-image: linear-gradient(78deg,#aecdc8 20%,green ); 
+        }
+        100%{
+          background-clip: text; /* plano de fundo e cortado ao redor do texto*/
+        -webkit-background-clip: text;/* plano de fundo e cortado ao redor do texto*/
+        background-image: linear-gradient(78deg, #aecdc8 30% ,green ); 
+        }
+        
+        
       }
     </style>
-    <h1 class="">like</h1>
+    <h1 class="like">like</h1>
   </body>
 </html>
