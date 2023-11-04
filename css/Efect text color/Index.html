@@ -25,9 +25,9 @@
         background-clip: text; /* plano de fundo e cortado ao redor do texto*/
         -webkit-background-clip: text;/* plano de fundo e cortado ao redor do texto*/
         
-        animation: text 3s ease-in-out .5s  infinite;
+        animation: degrade 3s ease-in-out  infinite alternate;
       }
-            @keyframes text {
+            @keyframes degrade {
         1% {
           background-clip: text; /* plano de fundo e cortado ao redor do texto*/
         -webkit-background-clip: text;/* plano de fundo e cortado ao redor do texto*/
@@ -81,7 +81,22 @@
         font-weight: bold;
         font-size: 30vw;
         text-transform: uppercase;
-        background: url();
+        background: url('images (15).jpeg');
+        color: #aecdc800;
+        background-clip: text;
+        -webkit-background-clip: text;
+        
+        animation: text ease 10s infinite alternate;
+        
+      }
+      @keyframes text {
+        from{
+          background-position: 0% 50% ;
+          
+        }
+        to{
+          background-position: 100% 50%;
+        }
       }
     </style>
     <h1 id="like">like</h1>
