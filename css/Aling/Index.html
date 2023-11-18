@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,11 +14,17 @@
 box-sizing: border-box;
   }
   body{
+    background: linear-gradient(78deg, grey , darkgray);
     width: 100vw;
     height: 100vh;
   }
   h1{
+    padding: 10px;
+    background-color: grey;
     color: white;
+    filter: drop-shadow(0 0 2px black) drop-shadow( 0 0 5px black) drop-shadow(0 0 15px black);
+
+    text-shadow:  0  2px black , 2px 1px 5px black;
   }
   
   
@@ -44,10 +50,28 @@ box-sizing: border-box;
     
     .pai.flex{
       display: flex;
-      justify-content: center;
+       justify-content: center;
+      align-items: center; 
+
+    }
+    .filho-flex{
+      background-color: yellow;
+      padding: 10px;
+
+      /*se for alinha soment um item defina pai flex filho como*/
+      display: flex;
+      
+     
     }
     
-    
+.pai.grid{
+  display: grid;
+  place-items: center;
+}
+
+.filho-grid{
+  background-color: black;
+}
   </style>
   
   
