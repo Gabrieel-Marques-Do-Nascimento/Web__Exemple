@@ -6,8 +6,66 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   
+  
+  <style type="text/css" media="all">
+  *{
+    margin: 0;
+    padding: 0;
+box-sizing: border-box;
+  }
+  body{
+    width: 100vw;
+    height: 100vh;
+  }
+  h1{
+    color: white;
+  }
+  
+  
+  
+    .pai{
+      width: 100%;
+      height: 400px;
+    }
+    
+  .pai.classico{
+    position: relative;
+    width: 100%;
+      height: 400px;
+  }
+    .filho-classico{
+      position: absolute;
+      background: green;
+      padding: 10px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    
+    .pai.flex{
+      display: flex;
+      justify-content: center;
+    }
+    
+    
+  </style>
+  
+  
 </head>
 <body>
+  
+  <div class="pai classico">
+    <h1 class="filho-classico">filho-classico</h1>
+  </div>
+  
+  <div class="pai flex">
+    <h1 class="filho-flex">filho-flex</h1>
+  </div>
+  
+  <div class="pai grid">
+    <h1 class="filho-grid">filho-grid</h1>
+  </div>
+  
   
 </body>
 </html>
