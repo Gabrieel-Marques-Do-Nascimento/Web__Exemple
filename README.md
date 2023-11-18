@@ -1,6 +1,6 @@
 # Web__Exemple
 
-<a href="https://gabrieel-marques-do-nascimento.github.io/Web__Exemple/css/Aling/index.html">menu</a>
+<a href="https://gabrieel-marques-do-nascimento.github.io/Web__Exemple/css/Aling/Index.html">Align</a>
 <br>
 <a href="https://gabrieel-marques-do-nascimento.github.io/Web__Exemple/java%20script/navigation/index.html">menu</a>
 <br>
