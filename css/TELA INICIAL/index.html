@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+
+
+<div id="tecla">
+..
+</div>
+
+<input type="text" id="digite-aqui" onkeyup="façaAlgo(event)">
+<script>
+
+
+let elem = document.getElementById('digite-aqui');
+
+elem.addEventListener("keydown", function (event) {
+    // O evento do parâmetro é do tipo KeyboardEvent
+  	addRow(event);
+});
+
+
+tecla = document.querySelector('#tecla').style="background:green;"
+  node.addEventListener("keydown", (e) => {
+  alert(e.key);
+  tecla.innerHTML= e.key;
+});
+</script>
+</body>
+
+</html>
