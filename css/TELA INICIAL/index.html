@@ -1,184 +1,238 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+            <meta
+                  name="viewport"
+                  content="width=device-width, initial-scale=1"
+            />
 
-        <title>inicio</title>
+            <title>inicio</title>
 
-        <!-- ideia add meus link direto da pagina com js -->
-        <style></style>
+            <!-- ideia add meus link direto da pagina com js -->
+            <style></style>
 
-        <!-- Custom Styles -->
-        <link rel="stylesheet" href="style.css" />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-        />
-    </head>
+            <!-- Custom Styles -->
+            <link rel="stylesheet" href="style.css" />
+            <link
+                  rel="stylesheet"
+                  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+            />
+      </head>
 
-    <body onload="time()">
-        <header>
-            <h1>Dev Junior</h1>
-            <div class="data" id="data">data e hora</div>
+      <body onload="time()">
+            <header>
+                  <h1>Dev Junior</h1>
+                  <div class="data" id="data">data e hora</div>
 
-            <script>
-                let hora1 = "",
-                    min1 = "",
-                    seg1 = "";
-                function time() {
-                    data = new Date();
+                  <script>
+                        let hora1 = "",
+                              min1 = "",
+                              seg1 = "";
+                        function time() {
+                              data = new Date();
 
-                    ano = data.getFullYear();
-                    mes = data.getMonth();
-                    dia = data.getDate();
-                    ho = data.getHours();
-                    mi = data.getMinutes();
-                    seg = data.getSeconds();
+                              ano = data.getFullYear();
+                              mes = data.getMonth();
+                              dia = data.getDate();
+                              ho = data.getHours();
+                              mi = data.getMinutes();
+                              seg = data.getSeconds();
 
-                    if (ho >= 0 || ho <= 9) {
-                        hora1 = "0";
-                    } else {
-                        hora1 = "";
-                    }
+                              if (ho >= 0 || ho <= 9) {
+                                    hora1 = "0";
+                              } else {
+                                    hora1 = "";
+                              }
 
-                    if (mi == 0 || mi <= 9) {
-                        min1 = "0";
-                    } else {
-                        min1 = "";
-                    }
+                              if (mi == 0 || mi <= 9) {
+                                    min1 = "0";
+                              } else {
+                                    min1 = "";
+                              }
 
-                    if (seg == 0 || seg <= 9) {
-                        seg1 = "0";
-                    } else {
-                        seg1 = "";
-                    }
+                              if (seg == 0 || seg <= 9) {
+                                    seg1 = "0";
+                              } else {
+                                    seg1 = "";
+                              }
 
-                    document.querySelector("#data").innerHTML =
-                        '<span class="horas">' +
-                        hora1 +
-                        ho +
-                        ":" +
-                        min1 +
-                        mi +
-                        ":" +
-                        seg1 +
-                        seg +
-                        '</span>  <span  class="amd"> ' +
-                        dia +
-                        "/" +
-                        mes +
-                        "/" +
-                        ano +
-                        "</span>";
-                    setTimeout("time()", 500);
-                }
-            </script>
+                              document.querySelector("#data").innerHTML =
+                                    '<span class="horas">' +
+                                    hora1 +
+                                    ho +
+                                    ":" +
+                                    min1 +
+                                    mi +
+                                    ":" +
+                                    seg1 +
+                                    seg +
+                                    '</span>  <span  class="amd"> ' +
+                                    dia +
+                                    "/" +
+                                    mes +
+                                    "/" +
+                                    ano +
+                                    "</span>";
+                              setTimeout("time()", 500);
+                        }
+                  </script>
 
-            <div class="pesquisa">
-                <input type="search" name="google" id="google" />
-                <a class="pesquisar" onclick="pesq()">
-                    <img src="lupa.svg" alt="lupa.svg" />
-                </a>
+                  <div class="pesquisa">
+                        <input type="search" name="google" id="google" />
+                        <a class="pesquisar" onclick="pesq()">
+                              <img src="lupa.svg" alt="lupa.svg" />
+                        </a>
+                  </div>
+
+                  <script>
+                        const inpute = document.querySelector("#google");
+
+                        function pesq() {
+                              location.href = `https://www.google.com/search?q=${inpute.value}&`;
+                        }
+
+                        document.addEventListener("keypress", function (event) {
+                              if (event.key === "Enter") {
+                                    location.href = `https://www.google.com/search?q=${inpute.value}&`;
+                                    // Ações a serem executadas quando o Enter for pressionado
+                              }
+                        });
+                  </script>
+            </header>
+
+            <div class="carregar">
+                  <h1>Hello world</h1>
             </div>
 
-            <script>
-                const inpute = document.querySelector("#google");
-
-                function pesq() {
-                    location.href = `https://www.google.com/search?q=${inpute.value}&`;
-                }
-            </script>
-        </header>
-
-        <div class="carregar">
-            <h1>Hello world</h1>
-        </div>
-
-        <div class="anime">
-            <!--animation anime-->
-        </div>
-
-        <div class="lenbret">
-            <lenbret></lenbret>
-        </div>
-
-        <div class="container">
-            <div class="sol"></div>
-            <div class="terra">
-                <div class="lua"></div>
+            <div class="anime">
+                  <!--animation anime-->
             </div>
-        </div>
 
-        <nav class="menu">
+            <div class="lenbret">
+                  <lenbret></lenbret>
+            </div>
+
+            <div class="container">
+                  <div class="sol"></div>
+                  <div class="terra">
+                        <div class="lua"></div>
+                  </div>
+            </div>
+
+            <nav class="menu">
+                  <span
+                        style="
+                              --i: 90deg;
+                              --d: 2;
+                              --x: 2;
+                              --y: 3;
+                              --x2: 1;
+                              --y2: -2.6;
+                        "
+                  >
+                        <a
+                              href="https://www.facebook.com/gabiel.marques.98?mibextid=ZbWKwL"
+                              >facebook</a
+                        ></span
+                  >
+                  <span
+                        style="
+                              --i: 90deg;
+                              --d: 2.5;
+                              --x: 2;
+                              --y: 0.5;
+                              --x2: 1;
+                              --y2: -1.8;
+                        "
+                  >
+                        <a
+                              href="https://instagram.com/gabriel_marques_0.000001?igshid=YTQwZjQ0NmI0OA=="
+                              >instagram</a
+                        ></span
+                  >
+                  <span
+                        style="
+                              --i: 90deg;
+                              --d: 3;
+                              --x: 2;
+                              --y: -2;
+                              --x2: 0;
+                              --y2: -1;
+                        "
+                  >
+                        <a
+                              href="https://youtube.com/@gabrielmarques6854?si=-HE0CVyz0SrZ1tf-"
+                              >youtube</a
+                        ></span
+                  >
+                  <span
+                        style="
+                              --i: 0;
+                              --d: 3;
+                              --x: 0;
+                              --y: 0;
+                              --x2: 0;
+                              --y2: 1.2;
+                        "
+                  >
+                        <a
+                              href="https://github.com/Gabrieel-Marques-Do-Nascimento"
+                              >github</a
+                        ></span
+                  >
+                  <span
+                        style="
+                              --i: 0;
+                              --d: 2.5;
+                              --x: 2;
+                              --y: 0;
+                              --x2: 0.5;
+                              --y2: 1.9;
+                        "
+                  >
+                        <a href="maito:gabrielmarquesnascimentob@gmail.com"
+                              >E-mail</a
+                        ></span
+                  >
+                  <span
+                        style="
+                              --i: 0;
+                              --d: 2;
+                              --x: 4;
+                              --y: 0;
+                              --x2: 0;
+                              --y2: 2.7;
+                        "
+                  >
+                        <a
+                              href="https://www.linkedin.com/in/gabriel-marques-671795276"
+                              >Linkedin</a
+                        ></span
+                  >
+            </nav>
             <span
-                style="--i: 90deg; --d: 2; --x: 2; --y: 3; --x2: 1; --y2: -2.6"
+                  class="close"
+                  style="--i: 0; --x: 3; --y: 0; --x2: 0; --y2: 0"
             >
-                <a
-                    href="https://www.facebook.com/gabiel.marques.98?mibextid=ZbWKwL"
-                    >facebook</a
-                ></span
-            >
-            <span
-                style="
-                    --i: 90deg;
-                    --d: 2.5;
-                    --x: 2;
-                    --y: 0.5;
-                    --x2: 1;
-                    --y2: -1.8;
-                "
-            >
-                <a
-                    href="https://instagram.com/gabriel_marques_0.000001?igshid=YTQwZjQ0NmI0OA=="
-                    >instagram</a
-                ></span
-            >
-            <span
-                style="--i: 90deg; --d: 3; --x: 2; --y: -2; --x2: 0; --y2: -1"
-            >
-                <a
-                    href="https://youtube.com/@gabrielmarques6854?si=-HE0CVyz0SrZ1tf-"
-                    >youtube</a
-                ></span
-            >
-            <span style="--i: 0; --d: 3; --x: 0; --y: 0; --x2: 0; --y2: 1.2">
-                <a href="https://github.com/Gabrieel-Marques-Do-Nascimento"
-                    >github</a
-                ></span
-            >
-            <span
-                style="--i: 0; --d: 2.5; --x: 2; --y: 0; --x2: 0.5; --y2: 1.9"
-            >
-                <a href="maito:gabrielmarquesnascimentob@gmail.com"
-                    >E-mail</a
-                ></span
-            >
-            <span style="--i: 0; --d: 2; --x: 4; --y: 0; --x2: 0; --y2: 2.7">
-                <a href="https://www.linkedin.com/in/gabriel-marques-671795276"
-                    >Linkedin</a
-                ></span
-            >
-        </nav>
-        <span class="close" style="--i: 0; --x: 3; --y: 0; --x2: 0; --y2: 0">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="ionicon"
-                viewBox="0 0 512 512"
-            >
-                <path
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="32"
-                    d="M368 368L144 144M368 144L144 368"
-                />
-            </svg>
-        </span>
-        <script>
-            /*
+                  <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ionicon"
+                        viewBox="0 0 512 512"
+                  >
+                        <path
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="32"
+                              d="M368 368L144 144M368 144L144 368"
+                        />
+                  </svg>
+            </span>
+            <script>
+                  /*
   let menu = document.querySelector('.menu');
   let close = document.querySelector('.close');
   close.onclick = function() {
@@ -189,132 +243,128 @@
   };
   */
 
-            let navigation = document.querySelector(".menu");
-            let close = document.querySelector(".close");
-            navigation.onclick = function () {
-                navigation.classList.add("ativo");
-            };
-            close.onclick = function () {
-                navigation.classList.remove("ativo");
-            };
-        </script>
-        <style>
-            .menu {
-            }
-            .menu span {
-                display: flex;
-                border-radius: 5px;
-                transition:
-                    width 2.5s,
-                    transform 2.5s,
-                    padding 3.5s;
+                  let navigation = document.querySelector(".menu");
+                  let close = document.querySelector(".close");
+                  navigation.onclick = function () {
+                        navigation.classList.add("ativo");
+                  };
+                  close.onclick = function () {
+                        navigation.classList.remove("ativo");
+                  };
+            </script>
+            <style>
+                  .menu {
+                  }
+                  .menu span {
+                        display: flex;
+                        border-radius: 5px;
+                        transition: width 2.5s, transform 2.5s, padding 3.5s;
 
-                align-items: center;
-                justify-content: center;
-                position: absolute;
-                background: white;
-                font-size: 0px;
-                padding: 20px 1px;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        background: white;
+                        font-size: 0px;
+                        padding: 20px 1px;
 
-                width: 2px;
-                height: 2px;
-                transition:
-                    width calc(1.5s * var(--d)),
-                    height calc(1.5s var(--d));
-                transform: translate(calc(8px * var(--x)), calc(8px * var(--y)))
-                    rotate(var(--i));
-            }
+                        width: 2px;
+                        height: 2px;
+                        transition: width calc(1.5s * var(--d)),
+                              height calc(1.5s var(--d));
+                        transform: translate(
+                                    calc(8px * var(--x)),
+                                    calc(8px * var(--y))
+                              )
+                              rotate(var(--i));
+                  }
 
-            .menu.ativo span {
-                z-index: 2;
-                color: black;
-                font-size: 16px;
-                padding: 4px;
+                  .menu.ativo span {
+                        z-index: 2;
+                        color: black;
+                        font-size: 16px;
+                        padding: 4px;
 
-                transform: translate(
-                        calc(10px * var(--x2)),
-                        calc(60px * var(--y2))
-                    )
-                    rotate(0);
-                width: auto;
-                height: auto;
+                        transform: translate(
+                                    calc(10px * var(--x2)),
+                                    calc(60px * var(--y2))
+                              )
+                              rotate(0);
+                        width: auto;
+                        height: auto;
 
-                animation: calc(0.3s * var(--d)) rotat ease-in-out;
-                & > a {
-                    font-size: 16px;
-                }
-            }
+                        animation: calc(0.3s * var(--d)) rotat ease-in-out;
+                        & > a {
+                              font-size: 16px;
+                        }
+                  }
 
-            .menu span a {
-                text-decoration: none;
-                font-size: 0;
-                color: darkblue;
-                font-weight: 600;
-            }
-            .menu span:hover,
-            .menu ~ .close:hover {
-                filter: drop-shadow(0 0 3px blue) drop-shadow(0 0 6px blue)
-                    drop-shadow(0 0 18px blue);
-                transition:
-                    0.5s,
-                    width 3s,
-                    height 3s;
-                color: darkblue;
-                font-weight: 900;
-            }
-            .menu.ativo ~ .close {
-                z-index: 1;
-                color: darkred;
-                filter: drop-shadow(0 0 3px red) drop-shadow(0 0 6px red)
-                    drop-shadow(0 0 18px red) drop-shadow(0 0 36px red);
-                transition:
-                    color 2s,
-                    filter 2s linear;
-            }
+                  .menu span a {
+                        text-decoration: none;
+                        font-size: 0;
+                        color: darkblue;
+                        font-weight: 600;
+                  }
+                  .menu span:hover,
+                  .menu ~ .close:hover {
+                        filter: drop-shadow(0 0 3px blue)
+                              drop-shadow(0 0 6px blue)
+                              drop-shadow(0 0 18px blue);
+                        transition: 0.5s, width 3s, height 3s;
+                        color: darkblue;
+                        font-weight: 900;
+                  }
+                  .menu.ativo ~ .close {
+                        z-index: 1;
+                        color: darkred;
+                        filter: drop-shadow(0 0 3px red)
+                              drop-shadow(0 0 6px red) drop-shadow(0 0 18px red)
+                              drop-shadow(0 0 36px red);
+                        transition: color 2s, filter 2s linear;
+                  }
 
-            .close {
-                position: absolute;
-                padding: 20px 1px;
-                background: white;
-                color: black;
+                  .close {
+                        position: absolute;
+                        padding: 20px 1px;
+                        background: white;
+                        color: black;
 
-                width: 2px;
-                height: 2px;
+                        width: 2px;
+                        height: 2px;
 
-                font-size: 0;
-                border-radius: 0;
-                transition:
-                    width 2s,
-                    height 2s,
-                    font-size 2s,
-                    border-radius 3s;
-            }
+                        font-size: 0;
+                        border-radius: 0;
+                        transition: width 2s, height 2s, font-size 2s,
+                              border-radius 3s;
+                  }
 
-            .menu.ativo ~ .close {
-                display: grid;
-                border-radius: 50%;
-                place-items: center;
-                font-family: "Times New Roman", Times, serif;
+                  .menu.ativo ~ .close {
+                        display: grid;
+                        border-radius: 50%;
+                        place-items: center;
+                        font-family: "Times New Roman", Times, serif;
 
-                font-size: 19px;
-                padding: 4px;
-                width: 40px;
-                height: 40px;
-            }
-            @keyframes rotat {
-                0% {
-                    transform: rotate(0deg)
-                        translate(calc(0px * var(--x2)), calc(0px * var(--y2)));
-                }
-                100% {
-                    transform: rotate(360deg)
-                        translate(
-                            calc(10px * var(--x2)),
-                            calc(60px * var(--y2))
-                        );
-                }
-            }
-        </style>
-        <footer></footer>
-    </body>
+                        font-size: 19px;
+                        padding: 4px;
+                        width: 40px;
+                        height: 40px;
+                  }
+                  @keyframes rotat {
+                        0% {
+                              transform: rotate(0deg)
+                                    translate(
+                                          calc(0px * var(--x2)),
+                                          calc(0px * var(--y2))
+                                    );
+                        }
+                        100% {
+                              transform: rotate(360deg)
+                                    translate(
+                                          calc(10px * var(--x2)),
+                                          calc(60px * var(--y2))
+                                    );
+                        }
+                  }
+            </style>
+            <footer></footer>
+      </body>
 </html>
