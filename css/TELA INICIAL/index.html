@@ -7,7 +7,7 @@
 
   <title>inicio</title>
   
-  <!-- HTML -->
+  <!-- ideia add meus link direto da pagina com js -->
   <style>
     
   </style>
@@ -24,7 +24,10 @@
      data e hora
    </div>
    
-   <script>function time() {
+   <script>
+   
+   let hora1="",min1="",seg1="";
+   function time() {
  data = new Date();
  
  ano = data.getFullYear();
@@ -32,12 +35,50 @@
  dia = data.getDate();
  ho = data.getHours();
  mi = data.getMinutes();
- se = data.getSeconds();
+ seg = data.getSeconds();
 
-document.querySelector('#data').innerHTML = ho + ":" + mi +":" +se+ "  <span> " + dia + "/" + mes + "/" + ano +"</span>";
+
+if(ho >= 0 || ho <= 9 ){
+  hora1 = "0" ;
+}
+else {
+  hora1 = "";
+  
+}
+
+
+if( mi == 0 || mi <= 9) {
+  min1 = "0";
+}
+else{
+  
+  min1 = "";
+}
+
+
+ if(seg == 0 || seg <= 9) {
+  seg1 = "0";
+}
+else{
+  
+  seg1 = "";
+  
+}
+
+
+
+document.querySelector('#data').innerHTML = '<span class="horas">'+ hora1 + ho + ":" + min1 +  mi + ":" + seg1 +  seg + '</span>  <span  class="amd"> ' + dia + "/" + mes + "/" + ano +"</span>";
 setTimeout('time()',500);
 
+
+
+
 }
+
+
+
+
+
 </script>
    
    
@@ -61,6 +102,7 @@ function pesq(){
 
 </script>
 </header>
+ 
 
  
 
@@ -95,7 +137,7 @@ function pesq(){
 <span style="--i:90deg;  --d:2.5;  --x:2; --y:0.5; --x2:1; --y2:-1.8;">  <a href="https://instagram.com/gabriel_marques_0.000001?igshid=YTQwZjQ0NmI0OA==">instagram</a></span>
 <span style="--i:90deg;  --d:3;  --x:2; --y:-2; --x2:0; --y2:-1;">  <a href="https://youtube.com/@gabrielmarques6854?si=-HE0CVyz0SrZ1tf-">youtube</a></span>
 <span style="--i:0; --d:3; --x:0; --y:0; --x2:0; --y2:1.2;">  <a href="https://github.com/Gabrieel-Marques-Do-Nascimento">github</a></span>
-<span style="--i:0;  --d:2.5;  --x:2; --y:0; --x2:.5; --y2:1.9;">  <a href="favoritos">favoritos</a></span>
+<span style="--i:0;  --d:2.5;  --x:2; --y:0; --x2:.5; --y2:1.9;">  <a href="maito:gabrielmarquesnascimentob@gmail.com">E-mail</a></span>
 <span style="--i:0;  --d:2;  --x:4; --y:0; --x2:0; --y2:2.7;">  <a href="https://www.linkedin.com/in/gabriel-marques-671795276">Linkedin</a></span>
 
 </nav>
@@ -151,6 +193,7 @@ function pesq(){
 }
 
 .menu.ativo span {
+  z-index: 2;
   color: black;
   font-size: 16px;
   padding: 4px;
@@ -179,9 +222,17 @@ height: auto;
     transition: 0.5s, width 3s , height 3s;
     color: darkblue;
 font-weight: 900;
-    
 }
-
+.menu.ativo  ~ .close{
+  z-index: 1;
+  color: darkred;
+      filter: drop-shadow(0 0 3px red) drop-shadow(0 0 6px red) drop-shadow(0 0 18px red) drop-shadow(0 0 36px red);
+      transition: color 2s , filter 2s linear;
+}
+ 
+ 
+ 
+ 
 .close{
   position: absolute;
   padding: 20px 1px;
