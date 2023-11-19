@@ -1,45 +1,44 @@
-/* We've started Quokka for you automatically on this file.
- *
- * To open a new Quokka file:
- *   - Press `Ctrl K, J` to create a new JavaScript File
- *   - Press `Ctrl K, T` to create a new TypeScript File
- *   - Press `Ctrl K, L` to open an interactive sample from:
- *     https://github.com/wallabyjs/interactive-examples
- *
- * To start/restart Quokka on an existing file:
- *   - Press `Ctrl K, Q`
+/* Iniciamos o Quokka para você automaticamente neste arquivo.
+  *
+  * Para abrir um novo arquivo Quokka:
+  * - Pressione `Ctrl K, J` para criar um novo arquivo JavaScript
+  * - Pressione `Ctrl K, T` para criar um novo arquivo TypeScript
+  * - Pressione `Ctrl K, L` para abrir uma amostra interativa de:
+  * https://github.com/wallabyjs/interactive-examples
+  *
+  * Para iniciar/reiniciar o Quokka em um arquivo existente:
+  * - Pressione `Ctrl K, Q`
 */
 
-// See the output of console.log right next to your code
+// Veja a saída de console.log ao lado do seu código
 const quokka = { isAwesome: true };
 
 console.log(quokka);
 
-// See the value of a variable simply by typing its name
+//  Veja o valor de uma variável simplesmente digitando seu nome
 quokka;
 
-// Use sequence expression to compare objects
+// Use expressão de sequência para comparar objetos
 const wallaby = { "is Quokka's BigBrother": true };
 
 (quokka, wallaby)
 
-// Gutter indicators show what code was executed (code coverage)
+// Indicadores de medianiz mostram qual código foi executado (cobertura de código)
 
-// Orange indicators means only part of the line was executed
-// because JavaScript stops processing after first false value
+ // Indicadores laranja significam que apenas parte da linha foi executada
+ // porque o JavaScript para de processar após o primeiro valor falso
 console.log('partialCoverage', false && true);
 
-// Green indicators means that Quokka executed all statements
-// on a line of code
+// Indicadores verdes significam que Quokka executou todas as instruções
+ //em uma linha de código
 if (false) {
-  // White indicators means that a line of code was never
-  // executed by Quokka
+// Indicadores brancos significam que uma linha de código nunca foi
+   //executado por Quokka
   console.log('noCoverage', true);
 }
 
-// Red indicators show where an error occurred. The error message
-// is also shown beside the error
+// Os indicadores vermelhos mostram onde ocorreu um erro.  A mensagem de erro
+ // também é mostrado ao lado do erro
 throw new Error('Something went wrong');
-
-// There's a lot more Quokka can do! Visit our docs to learn more:
+// Há muito mais que Quokka pode fazer!  Visite nossos documentos para saber mais:
 // - https://quokkajs.com/docs/
