@@ -94,7 +94,7 @@ right: 300px;
 
   width: 2em;
   height: 2em;
-  background: blue url('terra/terra.jpeg');
+  background: blue url('terra.jpeg');
   background-size: 190px;
   border-radius: 50%;
   animation-name: move,scale,rotate;
