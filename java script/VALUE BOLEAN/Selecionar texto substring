@@ -1,0 +1,11 @@
+/* Como funciona o substring()?
+O método substring() retorna o trecho de uma string de acordo com os números informados por parâmetro.
+
+Considerando o seguinte código:
+
+*/
+  var stringExemplo = "JavaScript é na DevMedia";
+  var resultado = stringExemplo.substring(0, 10);
+  
+  
+  // Sintaxe    string.substring(posicaoInicial [, posicaoFinal])
