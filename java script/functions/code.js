@@ -81,3 +81,37 @@ console.log(vezess)
 // funcao       parametro                  return                     numro01 X numero02         
 const Multip = ( Numero01 , Numero02 ) =>/*como se tivese um return / *  Numero01 * Numero02
     */
+
+
+
+
+/*
+add uma funcao click dire no elemento pelo js
+
+sintax
+
+element.addEventListener(event, function, useCapture);
+
+modo 1
+
+element.addEventListener("click", function(){ alert("Hello World!"); });
+
+modo 2
+
+element.addEventListener("click", myFunction);
+
+function myFunction() {
+  alert ("Hello World!");
+}
+
+remover ent list
+element.removeEventListener("mousemove", myFunction);
+
+
+
+
+
+
+
+
+*/

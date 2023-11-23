@@ -1,100 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+      <head>
+            <meta charset="UTF-8" />
+            <meta
+                  name="viewport"
+                  content="width=device-width, initial-scale=1"
+            />
+            <title>VS code</title>
+            <link rel="stylesheet" href="Estilo.css" />
+      </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VS code</title>
-  <link rel="stylesheet" href="Estilo.css">
-</head>
+      <body onload="web()">
+            <header onclick="hll()">
+                  <h1>Code Fake</h1>
+            </header>
+            <nav>
+                  <ul>
+                        <li id="um">modo 1</li>
+                        <li id="tudo">modo 2</li>
+                  </ul>
+            </nav>
 
-<body onload="web()">
-<header onclick="hll()">
-   <h1  > Code Fake</h1>
-</header>
-<nav>
-  <ul>
-    <li id="um" onclick="modo_01()">modo 1</li>
-  <li id="tudo" onclick="modo_02()">modo 2</li>
-  </ul>
-  
-</nav>
+            <div class="editor">
+                  <script class="js"></script>
 
-
-<div class="editor" >
-  
-  <script class="js" >
-
-
-
-  </script>
-  
-  
-  <div class="web" >
-    <p class="web1" >//</p> 
-    <h1 id="text"> Dev Pro</h1>
-  </div>
-  <div class="code" >
-     
-     <div >
-      <nav id="modo2">
-        <button id="htmlb">html</button>
-        <button id="cssb">Css</button>
-        <button id="javascriptb">javascript</button>
-      </nav>
-           <textarea  onblur="web()" id="html" > 
+                  <div class="web">
+                        <p class="web1">//</p>
+                        <h1 id="text">Dev Pro</h1>
+                  </div>
+                  <div class="code">
+                        <div>
+                              <nav id="modo2">
+                                    <button onclick="button('html')" id="html">
+                                          html
+                                    </button>
+                                    <button onclick="button('css')" id="css">
+                                          Css
+                                    </button>
+                                    <button
+                                          onclick="button('javascript')"
+                                          id="javascript"
+                                    >
+                                          javascript
+                                    </button>
+                              </nav>
+                              <textarea onblur="web()" id="htmlt">
+ 
     <h1 onclick="alerte()" >Background : green;</h1>
-           </textarea>
-     <h1 id="text">HTML</h1> 
-     </div>
-<div class="css_js">
-
- <div class="css">
-      <textarea onblur="web()" id="css"  >h1{ background: green ;
+           </textarea
+                              >
+                              <h1 id="text">HTML</h1>
+                        </div>
+                        <div class="css_js">
+                              <div class="css">
+                                    <textarea onblur="web()" id="csst">
+h1{ background: green ;
     /*color:white;*/
     padding:5px;
       }
       
       
-      </textarea>
-           <h1 id="text">CSS</h1>
- </div>
+      </textarea
+                                    >
+                                    <h1 id="text">CSS</h1>
+                              </div>
 
-
-
-
-      <div class="js">
-      <textarea  onblur="web()"  id="js"  >   
+                              <div class="js">
+                                    <textarea onblur="web()" id="js">
+   
          function alerte() {alert('Hello! I am an alert box!');
            
         }   
            
-           </textarea>
-       <h1 id="text">JavaScript</h1>
-</div>
+           </textarea
+                                    >
+                                    <h1 id="text">JavaScript</h1>
+                              </div>
+                        </div>
+                  </div>
+            </div>
 
-</div>
- 
+            <footer lang="pt-br">
+                  <p>&copy;vs code</p>
+            </footer>
 
+            <script
+                  src="Index.js"
+                  type="text/javascript"
+                  charset="utf-8"
+            ></script>
 
-
-  </div>
-  
-  
-</div>
-
-
-<footer lang="pt-br" >
-  <p> &copy;vs code </p>
-</footer>
-
-
-
-<script src="Index.js" type="text/javascript" charset="utf-8"> </script> 
-
-<style >
-
-</style>
-</body>
-
+            <style></style>
+      </body>
 </html>

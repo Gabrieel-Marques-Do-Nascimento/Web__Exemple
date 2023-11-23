@@ -1,18 +1,14 @@
+let site = document.querySelector(".web1");
+function web() {
+      let javascr = (document.querySelector("script.js").innerHTML =
+            "function all(){alert('hackeado')}");
 
+      html = document.querySelector("#htmlt").value;
+      css = document.querySelector("#csst").value;
+      js = document.querySelector("#js").value;
+      let scriipt = document.createElement("script");
 
-
-
- let site = document.querySelector('.web1');
-function web(){
- 
-  let javascr = document.querySelector('script.js').innerHTML="function all(){alert('hackeado')}";
-
-html = document.querySelector('#html').value;
-css = document.querySelector('#css').value;
-js = document.querySelector('#js').value;
-let scriipt = document.createElement('script');
-
-/*
+      /*
 htmltx = document.createTextNode(html);
 csstx = document.createTextNode(css.value);
 jstx = document.createTextNode(js);
@@ -23,32 +19,52 @@ scriipt.src= js;
 scriipt.async = true;
 */
 
-  site.innerHTML = '<!DOCTYPE html> <html lang="pt-br"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta http-equiv="X-UA-Compatible" content="ie=edge"> <title>Document</title></head><body>'+html+ " <style> .web1 { >" +css +" }</style> </body> </html>";
-//  javascr.innerHTML = ;
-  
-  
-  
+      site.innerHTML =
+            '<!DOCTYPE html> <html lang="pt-br"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta http-equiv="X-UA-Compatible" content="ie=edge"> <title>Document</title></head><body>' +
+            html +
+            " <style> .web1 { >" +
+            css +
+            " }</style> </body> </html>";
+      //  javascr.innerHTML = ;
 }
 
+um = document.querySelector("#um");
+tudo = document.querySelector("#tudo");
+code = document.querySelector("div.code");
+nav = document.querySelector("nav#modo2");
+nav.style.background = "black";
 
-um = document.querySelector('#um');
-tudo = document.querySelector('#tudo');
-code = document.querySelector('div.code');
-nav = document.querySelector('nav#modo2');
-nav.style.background="black";
-function modo_01() {
-um.style.display="none";
-tudo.style.display="block";
-nav.style.display="flex";
-code.classList.add("modo2");
+um.addEventListener("click", function () {
+      um.style.display = "none";
+      tudo.style.display = "block";
+      nav.style.display = "flex";
+      code.classList.add("modo2");
+});
 
+tudo.addEventListener("click", function () {
+      tudo.style.display = "none";
+      um.style.display = "block";
 
-}
+      code.classList.remove("modo2");
+      nav.style.display = "none";
+});
 
-function modo_02() {
+let button = (tipo) => {
+      btm = document.querySelector(`#${tipo}`).style.color = "blue";
 
-tudo  .style.display="none";
-um.style.display="block";
+      if (button("css")) {
+            btm.style.display = "none";
+      }
+      /*
+ if (button('css')) {
+       alert("acertou miserav");
+ }
 
-code.classList.remove("modo2");  nav.style.display="none";
-}
+//   else if(button("html")) {
+//         alert("html");
+//   }
+
+// else if(button("javascript")) {
+//         alert("js");
+//   }*/
+};
