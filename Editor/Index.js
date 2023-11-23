@@ -1,23 +1,11 @@
-// modo_1 = document.querySelector('li#tudo').style.display="none";
-  modo_2 = document.querySelector('li#um').style="display:block";
-
-function modo_01(){
-  
-  
-  
-// modo_1.style="background-color:blue;";
-// modo_2.style.display="block";
-
-
-}
 
 
 
 
-
+ let site = document.querySelector('.web1');
 function web(){
-  let site = document.querySelector('.web1');
-  let javascr = document.querySelector('script#js').innerHTML="function all(){alert('hackeado')}";
+ 
+  let javascr = document.querySelector('script.js').innerHTML="function all(){alert('hackeado')}";
 
 html = document.querySelector('#html').value;
 css = document.querySelector('#css').value;
@@ -43,3 +31,24 @@ scriipt.async = true;
 }
 
 
+um = document.querySelector('#um');
+tudo = document.querySelector('#tudo');
+code = document.querySelector('div.code');
+nav = document.querySelector('nav#modo2');
+nav.style.background="black";
+function modo_01() {
+um.style.display="none";
+tudo.style.display="block";
+nav.style.display="flex";
+code.classList.add("modo2");
+
+
+}
+
+function modo_02() {
+
+tudo  .style.display="none";
+um.style.display="block";
+
+code.classList.remove("modo2");  nav.style.display="none";
+}
