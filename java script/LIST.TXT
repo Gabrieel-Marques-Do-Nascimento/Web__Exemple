@@ -195,3 +195,8 @@ n não estático (ex: nova data ().getDate())
 argumento necessário
 argumento facultativo
 CodeMio
+
+
+
+
+método setAttribute() add atributo tipo id name...   const button = document.querySelector("button");  button.setAttribute("name", "helloButton");

@@ -51,11 +51,18 @@ tudo.addEventListener("click", function () {
 
 let button = (tipo) => {
       btm = document.querySelector(`#${tipo}`).style.color = "blue";
-
+   alert(toString(tipo).valueOf());
+      if (toString(tipo) == 'css') {
+            alert("acertou miserav");
+      }
+      else{
+            alert('hack')
+      }
+  /*
       if (button("css")) {
             btm.style.display = "none";
       }
-      /*
+    
  if (button('css')) {
        alert("acertou miserav");
  }
