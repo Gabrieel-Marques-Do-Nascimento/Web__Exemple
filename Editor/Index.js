@@ -49,15 +49,44 @@ tudo.addEventListener("click", function () {
       nav.style.display = "none";
 });
 
+
 let button = (tipo) => {
-      btm = document.querySelector(`#${tipo}`).style.color = "blue";
-   alert(toString(tipo).valueOf());
-      if (toString(tipo) == 'css') {
+      let html5 =document.querySelector(`#html`);
+      let css3 = document.querySelector(`#css`);
+      let javascript3 = document.querySelector(`#javascript`);
+  
+      btm = document.querySelector(`#${tipo}`);
+      
+btm.style.color = "blue";
+      if(tipo == "javascript") {
+        
+        btm.style.display="block";
             alert("acertou miserav");
+            
       }
       else{
-            alert('hack')
+            alert('nao e javascript');
       }
+      if(tipo == "html") {
+        
+        btm.style.display="block";
+            alert("acertou miserav");
+            
+      }
+      else{
+            alert('nao e html');
+      }
+      
+      if(tipo == "css") {
+        
+        btm.style.display="block";
+            alert("acertou miserav");
+            
+      }
+      else{
+            alert('nao e css');
+      }
+      
   /*
       if (button("css")) {
             btm.style.display = "none";
