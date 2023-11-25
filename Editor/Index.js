@@ -1,3 +1,6 @@
+
+// codigos nos textarea no paragrafo  -------------------------------------------------------------------------------------------------------------------
+
 let site = document.querySelector(".web1");
 function web() {
       let javascr = (document.querySelector("script.js").innerHTML =
@@ -5,7 +8,7 @@ function web() {
 
       html = document.querySelector("#htmlt").value;
       css = document.querySelector("#csst").value;
-      js = document.querySelector("#js").value;
+      js = document.querySelector("textarea#js").value;
       let scriipt = document.createElement("script");
 
       /*
@@ -28,6 +31,12 @@ scriipt.async = true;
       //  javascr.innerHTML = ;
 }
 
+
+
+
+// modo 1 e modo 2 ----------------------------------------------------------------------------------------------------------------------------------------
+
+
 um = document.querySelector("#um");
 tudo = document.querySelector("#tudo");
 code = document.querySelector("div.code");
@@ -47,60 +56,73 @@ tudo.addEventListener("click", function () {
 
       code.classList.remove("modo2");
       nav.style.display = "none";
+
+// todo textearea ---------
+      html5.style.display="block";
+      css3.style.display="block";
+  javascript3.style.display="block";
+
 });
 
 
+
+
+
+
+
+
+
+
+
+// buttons  -----------------------------------------------------------------------------------------------------------------------------------------------
+
+  let html5 =document.querySelector(`.html_`);
+      let css3 = document.querySelector(`.css`);
+      let javascript3 = document.querySelector(`div.js`);
 let button = (tipo) => {
-      let html5 =document.querySelector(`#html`);
-      let css3 = document.querySelector(`#css`);
-      let javascript3 = document.querySelector(`#javascript`);
+    
   
       btm = document.querySelector(`#${tipo}`);
       
-btm.style.color = "blue";
+//btm.style.color = "blue";
       if(tipo == "javascript") {
         
-        btm.style.display="block";
-            alert("acertou miserav");
+           
+            html5.style.display="none";
+            css3.style.display="none";
+        javascript3.style.display="block";
+         //   alert("javascript");
             
       }
       else{
-            alert('nao e javascript');
+           
+   
       }
       if(tipo == "html") {
         
-        btm.style.display="block";
-            alert("acertou miserav");
+            javascript3.style.display="none";
+            html5.style.display="block";
+            css3.style.display="none";
+       
+          //  alert("html");
             
       }
       else{
-            alert('nao e html');
+          
+  
       }
       
       if(tipo == "css") {
         
-        btm.style.display="block";
-            alert("acertou miserav");
+            javascript3.style.display="none";
+        html5.style.display="none";
+        css3.style.display="block";
+          //  alert("css");
             
       }
       else{
-            alert('nao e css');
+            
+ 
       }
       
-  /*
-      if (button("css")) {
-            btm.style.display = "none";
-      }
-    
- if (button('css')) {
-       alert("acertou miserav");
- }
-
-//   else if(button("html")) {
-//         alert("html");
-//   }
-
-// else if(button("javascript")) {
-//         alert("js");
-//   }*/
 };
