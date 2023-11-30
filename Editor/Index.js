@@ -27,7 +27,7 @@ function web() {
 
 
 
-// modo 1 e modo 2 ----------------------------------------------------------------------------------------------------------------------------------------
+// modo 1 e modo 2  button ----------------------------------------------------------------------------------------------------------------------------------------
 
 
 um = document.querySelector("#um");
@@ -36,14 +36,19 @@ code = document.querySelector("div.code");
 nav = document.querySelector("nav#modo2");
 nav.style.background = "black";
 
+
+
+
+
 um.addEventListener("click", function () {
       um.style.display = "none";
       tudo.style.display = "block";
       nav.style.display = "flex";
       code.classList.add("modo2");
+
 });
 
-tudo.addEventListener("click", function () {
+tudo.addEventListener("click", () => {
       tudo.style.display = "none";
       um.style.display = "block";
 
@@ -85,6 +90,9 @@ let button = (tipo) => {
             css3.style.display="none";
         javascript3.style.display="block";
          //   alert("javascript");
+
+
+
             
       }
       else{
@@ -119,3 +127,4 @@ let button = (tipo) => {
       }
       
 };
+
