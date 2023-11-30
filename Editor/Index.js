@@ -3,24 +3,15 @@
 
 let site = document.querySelector(".web1");
 function web() {
-      let javascr = (document.querySelector("script.js").innerHTML =
-            "function all(){alert('hackeado')}");
-
+ 
       html = document.querySelector("#htmlt").value;
       css = document.querySelector("#csst").value;
       js = document.querySelector("textarea#js").value;
-      let scriipt = document.createElement("script");
-
-      /*
-htmltx = document.createTextNode(html);
-csstx = document.createTextNode(css.value);
-jstx = document.createTextNode(js);
-
-scriipt.appendChild(jstx);
-site.appendChild(scriipt);
-scriipt.src= js;
-scriipt.async = true;
-*/
+    
+            let scriipt = document.createElement("script");
+            
+        document.body.appendChild(scriipt);
+      scriipt.innerHTML=js;
 
       site.innerHTML =
             '<!DOCTYPE html> <html lang="pt-br"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta http-equiv="X-UA-Compatible" content="ie=edge"> <title>Document</title></head><body>' +
@@ -28,7 +19,9 @@ scriipt.async = true;
             " <style> .web1 { >" +
             css +
             " }</style> </body> </html>";
-      //  javascr.innerHTML = ;
+
+
+  
 }
 
 
