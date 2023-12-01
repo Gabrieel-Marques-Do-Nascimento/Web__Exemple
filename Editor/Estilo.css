@@ -48,7 +48,7 @@ li:hover {
       color: grey;
       transition: 1.5s;
 }
-li#um {
+li#tudo {
       display: none;
 }
 
@@ -94,8 +94,8 @@ textarea {
       text-align: start;
       word-wrap: wrap;
 }
-.modo2 .css,
-.modo2 .js {
+.css,
+.js {
       border: 1px solid black;
       position: relative;
       width: 50%;
@@ -128,7 +128,7 @@ footer {
       width: 100%;
       height: 50%;
 }
-.modo2 #htmlt {
+#htmlt {
       width: 100%;
 }
 
@@ -153,7 +153,7 @@ textarea {
       text-align: start;
       word-wrap: wrap;
 }
-.css{
+.modo2 .css{
       border: 1px solid black;
       position: relative;
      
@@ -161,7 +161,7 @@ textarea {
       height: 57vh; 
       display: none;
 }
-.js {
+.modo2 .js {
       border: 1px solid black;
       position: relative;
      
@@ -176,7 +176,7 @@ textarea {
       width: 100%;
       height: 100%;
 }
-#htmlt {
+.modo2 #htmlt {
       width: 100%;
       height: 57vh;
 }
@@ -195,8 +195,6 @@ button {
 }
 #cssb {
 }
-
-
 
 @media screen and (min-width:992px){
 
