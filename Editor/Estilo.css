@@ -19,7 +19,9 @@ header{
 }
 nav.modos{
 top: 02px;left: 15px;
-position: absolute;
+position: absolute;   
+
+
 }
 ul{
       list-style: none;
