@@ -18,13 +18,14 @@ header{
       justify-content: center;
 }
 nav.modos{
-position: absolute;top: 02px;left: 15px;
+top: 02px;left: 15px;
+position: absolute;
 }
 ul{
       list-style: none;
 }
 li{
-      position: relative;
+   
       text-transform: uppercase;
       padding: 3px;
       background-color: aquamarine;
