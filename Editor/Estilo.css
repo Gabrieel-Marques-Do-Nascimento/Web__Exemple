@@ -49,3 +49,8 @@ li:active{
 #um{
       display: none;
 }
+#tudo{
+  display: block;
+}
+
+.editor{}
