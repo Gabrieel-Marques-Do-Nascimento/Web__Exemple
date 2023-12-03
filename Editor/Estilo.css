@@ -6,7 +6,7 @@
 body{
       background-color: black;
       color: white;
-      min-height: 100vh;
+ height: 100vh;
       min-width: 100vw;
       padding: 0 7px;
       position: relative;
@@ -53,26 +53,47 @@ li:active{
   display: block;
 }
 
+.editor{
+      width: 100%;
+      height: 91%;
+}
+
 .web{
       position: relative;
       padding: 8px;
       background: linear-gradient(78deg,white , gray);
       color: black;
   width: 100%;
-  height: 50vh;
+  height: 50%;
 }
+/* .code{
+      height: 50%;
+} */
 #nome{
       position: absolute;
-      color: grey;
+      background-color: rgba(3, 3, 255, 0.208);
+      /* color: rgb(255, 185, 185); */
+      color: rgba(255, 255, 255, 0.655);
+      text-shadow: rgba(0, 0, 0, 0.641) .1px 5px  ;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
 }
 .html_, .css,.js{
 position: relative;
+height: 42vh;
+
+
 }
 .html_ textarea, .css textarea,.js textarea{
+      background: linear-gradient(78deg,white , gray);
       width: 100%;
       height: 100%;
+      
       /**/
-      }
+  }
+
+  .css , .js{
+      display: none;
+  }
+
