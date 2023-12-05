@@ -91,14 +91,14 @@ nav#modo2{
 }
 button{
       background: radial-gradient( rgba(223, 219, 219, 0.289) ,white);
-      
+      font-size: 19px;
       color: rgb(235, 234, 234);
       text-shadow: 2px 0px 0 black;
       text-transform: uppercase;
       margin: 0 4px;
       padding: 3px;
-      width: 60px;
-      transition: .7s;
+      width: 85px;
+      transition: .5s;
 }
  button:hover{
   border-radius: 20%;
@@ -135,7 +135,7 @@ footer{
       display: flex;
       justify-content: center;
       align-items: center;
-    height: 3%;
+    height: 2%;
 }
 
 /*
@@ -172,10 +172,12 @@ Telas Grandes: acima de 1200px
 
 
 /* tela 3*/
-
-
+@media screen and (min-width:768px) and (max-width:992px)
+{
+  
+}
 
 /* tres telas 
 tela 1 com   html  1 linha
 tela 2 com html  50% e css  50%  1 linha  nav button js clicado muda pra js
-tela 3 com  html 100%  css  50% js  50%* 2 linhas  nav  display none /
+tela 3 com  html 100%  css  50% js  50%* 2 linhas  nav  display none */
