@@ -30,6 +30,9 @@
                         let hora1 = "",
                               min1 = "",
                               seg1 = "";
+                              dia1 = "";
+                              mes1 = "";
+                              ano1 = "";
                         function time() {
                               data = new Date();
 
@@ -52,11 +55,41 @@
                                     min1 = "";
                               }
 
-                              if (seg == 0 || seg <= 9) {
+                              if (seg <= 9) {
                                     seg1 = "0";
                               } else {
                                     seg1 = "";
                               }
+
+                              if( dia <= 9 )
+                              {
+                                dia1 = "0";
+                              }
+                              else
+                              {
+                                dia1 = "";
+                                }
+                                if(mes <= 9 )
+                              {
+                                mes1 = "0";
+                              }
+                              else
+                              {
+                                mes1 = "";
+                              }
+                              if(ano == 0 || ano <= 9 )
+                              {
+                                ano1 = "0";
+                              }
+                              else
+                              {
+                                ano1 = "";
+                              }
+    
+
+
+
+
 
                               document.querySelector("#data").innerHTML =
                                     '<span class="horas">' +
