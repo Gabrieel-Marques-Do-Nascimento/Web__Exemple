@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+      <head>
+            <meta charset="UTF-8" />
+            <meta
+                  name="viewport"
+                  content="width=device-width, initial-scale=1"
+            />
+            <title>VS code</title>
+            <link rel="stylesheet" href="Estilo.css" />
+      </head>
+
+      <body onload="web()">
+            <header onclick="hll()">
+                  <h1>Code Fake</h1>
+            </header>
+            <nav>
+                  <ul>
+                        <li id="um">modo 1</li>
+                        <li id="tudo">modo 2</li>
+                  </ul>
+            </nav>
+
+            <div class="editor">
+             
+
+                  <div class="web">
+                        <p class="web1" >//</p>
+                        <h1 id="text">Dev Pro</h1>
+                  </div>
+                  <div class="code">
+                        <div>
+                              <nav id="modo2">
+                                    <button onclick="button('html')" id="html">
+                                          html
+                                    </button>
+                                    <button onclick="button('css')" id="css">
+                                          Css
+                                    </button>
+                                    <button
+                                          onclick="button('javascript')"
+                                          id="javascript"
+                                    >
+                                          javascript
+                                    </button>
+                              </nav>
+                              <div class="html_">
+                                    <textarea onblur="web()" id="htmlt" placeholder="html">
+                                     
+                                        <h1 onclick="alerte()" >Background : green;</h1>
+                                               </textarea
+                         
+                              >
+                              <h1 id="text">HTML</h1>     </div>
+                        </div>
+                        <div class="css_js">
+                              <div class="css">
+                                    <textarea onblur="web()" id="csst" title="css"> 
+h1{ background: green ;
+    /*color:white;*/
+    padding:5px;
+      }
+      
+      
+      </textarea
+                                    >
+                                    <h1 id="text">CSS</h1>
+                              </div>
+
+                              <div class="js">
+                                    <textarea onblur="web()" id="js" title="js">
+   
+         function alerte() {alert('Hello! I am an alert box!');
+           
+        }   
+           
+           </textarea
+                                    >
+                                    <h1 id="text">JavaScript</h1>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+
+            <footer lang="pt-br">
+                  <p>&copy;vs code</p>
+            </footer>
+
+            <script
+                  src="Index.js"
+                  type="text/javascript"
+                  charset="utf-8"
+            ></script>
+            <script class="js"></script>
+            <style></style>
+      </body>
+</html>
