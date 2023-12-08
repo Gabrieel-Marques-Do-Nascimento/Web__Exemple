@@ -1,35 +1,32 @@
-
 /* tela 1*/
-*{
+* {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
 }
-body{
+body {
       background-color: black;
       color: white;
- height: 100vh;
+      height: 100vh;
       min-width: 100vw;
       padding: 0 7px;
       position: relative;
 }
-header{
+header {
       padding: 1px 0px;
       display: flex;
       align-items: center;
       justify-content: center;
 }
-nav.modos{
-top: 08px;left: 15px;
-position: absolute;   
-
-
+nav.modos {
+      top: 08px;
+      left: 15px;
+      position: absolute;
 }
-ul{
+ul {
       list-style: none;
 }
-li{
-   
+li {
       text-transform: uppercase;
       padding: 3px;
       background-color: aquamarine;
@@ -37,60 +34,61 @@ li{
       color: white;
       transition: 1s;
 }
-li:hover{
+li:hover {
       background-color: rgb(255, 255, 255);
       text-shadow: 2px 2px 1px black;
       color: black;
-    font-weight:500;
+      font-weight: 500;
 }
-li:active{
+li:active {
       background-color: rgb(210, 206, 206);
       text-shadow: 2px 2px 2px black;
-      color: black;  font-weight: 900;
+      color: black;
+      font-weight: 900;
 }
-#um{
+#um {
       display: none;
 }
-#tudo{
-  display: block;
+#tudo {
+      display: block;
 }
 
-.editor{
+.editor {
       width: 100%;
       height: 90%;
 }
 
-.web{
+.web {
       position: relative;
       padding: 8px;
-      background: linear-gradient(78deg,white , gray);
+      background: linear-gradient(78deg, white, gray);
       color: black;
-  width: 100%;
-  height: 48%;
+      width: 100%;
+      height: 47%;
 }
 /* .code{
       height: 50%;
 } */
-#nome{
+#nome {
       position: absolute;
       background-color: rgba(3, 3, 255, 0.208);
       /* color: rgb(255, 185, 185); */
       color: rgba(255, 255, 255, 0.655);
-      text-shadow: rgba(0, 0, 0, 0.641) .1px 5px  ;
+      text-shadow: rgba(0, 0, 0, 0.641) 0.1px 5px;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
 }
 
-nav#modo2{
+nav#modo2 {
       display: flex;
       justify-content: center;
       margin: 4px 0;
       font-family: serif;
       font-weight: 800;
 }
-button{
-      background: radial-gradient( rgba(223, 219, 219, 0.289) ,white);
+button {
+      background: radial-gradient(rgba(223, 219, 219, 0.289), white);
       font-size: 19px;
       color: rgb(235, 234, 234);
       text-shadow: 2px 0px 0 black;
@@ -98,22 +96,24 @@ button{
       margin: 0 4px;
       padding: 3px;
       width: 85px;
-      transition: .5s;
+      transition: 0.5s;
 }
- button:hover{
-  border-radius: 20%;
+button:hover {
+      border-radius: 20%;
 }
- button:active{
+button:active {
       border-radius: 50%;
-    }
-.html_, .css,.js{
-position: relative;
-height: 42vh;
-
-
 }
-.html_ textarea, .css textarea,.js textarea{
-      background: linear-gradient(78deg,white , gray);
+.html_,
+.css,
+.js {
+      position: relative;
+      height: 42vh;
+}
+.html_ textarea,
+.css textarea,
+.js textarea {
+      background: linear-gradient(78deg, white, gray);
       outline: none;
       word-wrap: break-word;
       font-family: serif;
@@ -123,19 +123,20 @@ height: 42vh;
       padding: 7px;
       width: 100%;
       height: 100%;
-      
+
       /**/
-  }
+}
 
-  .css , .js{
+.css,
+.js {
       display: none;
-  }
+}
 
-footer{
+footer {
       display: flex;
       justify-content: center;
       align-items: center;
-    height: 2%;
+      height: 2%;
 }
 
 /*
@@ -150,62 +151,90 @@ Desktop: 992                  (ate 1200px)
 Telas Grandes: acima de 1200px
 */
 
-
 /* tela 2*/
-@media screen and (min-width:768px) and (max-width:992px){
-      body{
-            overflow-x: hidden;
+@media screen and (min-width: 768px) and (max-width: 992px) {
+      body {
+            overflow: hidden;
             height: 100vh;
-           width: 100vw;
+            width: 100vw;
             background-color: rgb(28, 27, 26);
       }
-      header h1{
-            
+      header h1 {
             background: black;
             padding: 0 50px;
             margin: 4px;
       }
+
+    
       .code {
-            max-width:100vw;
+            max-width: 100vw;
             display: grid;
-            grid-template-columns: repeat(2,1fr);
-            grid-template-rows: repeat(2,auto);
-       
-      
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, auto);
       }
-      nav#modo2{
+      nav#modo2 {
             grid-column: 1/-1;
             background: black;
       }
-      
-      .html_{
+
+      .html_ {
             grid-column: 1;
-/*          
+            /*          
           width: 40%; */
-        
-           
       }
-      .css_js
-      {
+      .css_js {
             grid-column: 2;
             /* width: 40%; */
-          
-        
       }
-     .css{
-     display: block;
-     
-}
- .js{
-     
+      .css {
+            display: block;
+      }
+      .js {
+      }
+      footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 3%;
       }
 }
-
 
 /* tela 3*/
-@media screen and (min-width:992px)
-{
-  
+@media screen and (min-width: 992px) {
+      body{
+            overflow: hidden;
+      }  .web{
+            height: 52%;
+      }
+      .code {
+            max-width: 100vw;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, auto);
+      }
+      nav#modo2 {
+            display: none;
+            background: black;
+      }
+
+      .html_ {
+            grid-column: 1;
+            width: auto;
+      }
+      .css_js {
+            display: flex;
+            grid-column: 2/-1;
+            width: auto;
+      }
+      .css {
+            display: flex;
+
+            width: 50%;
+      }
+      .js {
+            display: block;
+            width: 50%;
+      }
 }
 
 /* tres telas 
