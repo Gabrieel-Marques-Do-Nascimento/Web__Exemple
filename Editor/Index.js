@@ -1,130 +1,104 @@
-
 // codigos nos textarea no paragrafo  -------------------------------------------------------------------------------------------------------------------
+corpo = document.body;
+texthtml = document.querySelector("textarea#htmlt");
+textcss = document.querySelector("textarea#csst");
+textjs = document.querySelector("textarea#js");
+web1 = document.querySelector(".web1");
 
-let site = document.querySelector(".web1");
-function web() {
- 
-      html = document.querySelector("#htmlt").value;
-      css = document.querySelector("#csst").value;
-      js = document.querySelector("textarea#js").value;
-    
-            let scriipt = document.createElement("script");
-            
-        document.body.appendChild(scriipt);
-      scriipt.innerHTML=js;
+textjs.style.color = "green";
+document.body.addEventListener("load", function () {});
 
-      site.innerHTML =
-            '<!DOCTYPE html> <html lang="pt-br"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta http-equiv="X-UA-Compatible" content="ie=edge"> <title>Document</title></head><body>' +
-            html +
-            " <style> .web1 { >" +
-            css +
-            " }</style> </body> </html>";
-
-
-  
+function tela() {
+      if (x < 992) {
+      }
 }
-
-
-
 
 // modo 1 e modo 2  button ----------------------------------------------------------------------------------------------------------------------------------------
 
-
-um = document.querySelector("#um");
-tudo = document.querySelector("#tudo");
-code = document.querySelector("div.code");
-nav = document.querySelector("nav#modo2");
-nav.style.background = "black";
-
-
-
-
-
-um.addEventListener("click", function () {
-      um.style.display = "none";
-      tudo.style.display = "block";
-      nav.style.display = "flex";
-      code.classList.add("modo2");
-
-});
-
-tudo.addEventListener("click", () => {
-      tudo.style.display = "none";
-      um.style.display = "block";
-
-      code.classList.remove("modo2");
-      nav.style.display = "none";
-
-// todo textearea ---------
-      html5.style.display="block";
-      css3.style.display="block";
-  javascript3.style.display="block";
-
-});
-
-
-
-
-
-
-
-
-
-
-
 // buttons  -----------------------------------------------------------------------------------------------------------------------------------------------
+divhtml = document.querySelector(".html_");
+divcss = document.querySelector(".css");
+divjs = document.querySelector(".js");
 
-  let html5 =document.querySelector(`.html_`);
-      let css3 = document.querySelector(`.css`);
-      let javascript3 = document.querySelector(`div.js`);
-let button = (tipo) => {
-    
-  
-      btm = document.querySelector(`#${tipo}`);
-      
-//btm.style.color = "blue";
-      if(tipo == "javascript") {
-        
-           
-            html5.style.display="none";
-            css3.style.display="none";
-        javascript3.style.display="block";
-         //   alert("javascript");
+var x =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
 
+function button(tipo) {
+      if (x > 992) {
+            divjs.style.display = "block";
+            divcss.style.display = "block";
 
+            divhtml.style.display = "block";
+      }
 
-            
-      }
-      else{
-           
-   
-      }
-      if(tipo == "html") {
-        
-            javascript3.style.display="none";
-            html5.style.display="block";
-            css3.style.display="none";
-       
-          //  alert("html");
-            
-      }
-      else{
-          
-  
-      }
-      
-      if(tipo == "css") {
-        
-            javascript3.style.display="none";
-        html5.style.display="none";
-        css3.style.display="block";
-          //  alert("css");
-            
-      }
-      else{
-            
- 
-      }
-      
-};
+      if (x < 768) {
+            divcss.style.display = "none";
+            divjs.style.display = "none";
 
+            divhtml.style.display = "block";
+
+            if (tipo == "html") {
+                  divcss.style.display = "none";
+                  divjs.style.display = "none";
+
+                  divhtml.style.display = "block";
+            } else if (tipo == "css") {
+                  divcss.style.display = "block";
+                  divjs.style.display = "none";
+
+                  divhtml.style.display = "none";
+            } else if (tipo == "javascript") {
+                  divjs.style.display = "block";
+                  divcss.style.display = "none";
+
+                  divhtml.style.display = "none";
+            }
+      }
+
+      if (x > 768 && x < 992) {
+            divcss.style.display = "block";
+            divjs.style.display = "none";
+            divhtml.style.display = "block";
+
+            if (tipo == "css") {
+                  divcss.style.display = "block";
+                  divjs.style.display = "none";
+
+                  divhtml.style.display = "block";
+            } else if (tipo == "javascript") {
+                  divjs.style.display = "block";
+                  divcss.style.display = "none";
+
+                  divhtml.style.display = "block";
+            }
+      }
+}
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+// window.onresize = function () {
+//       var x =
+//             window.innerWidth ||
+//             document.documentElement.clientWidth ||
+//             document.body.clientWidth;
+//       if (w < 800) {
+//             //executar o código aqui dentro
+//       }
+// };
+
+// ------------------------------- RECARREGAR PAGINA----------------------------------
+
+// divhtmlload = document.querySelector(".html_");
+// divcssload = document.querySelector(".css");
+// divjsload = document.querySelector(".js");
+
+largura =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+
+function recarregar() {
+      history.go();
+
+}
