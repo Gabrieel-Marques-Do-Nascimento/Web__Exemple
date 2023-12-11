@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+.delet{
+    display: none;
+}
+
+</style>
+
+
+<body onresize="whidthh()" onload="whidthh()">
+    <h1 id="h1">1</h1>
+    <h1 id="h2">2</h1>
+    <h1 id="h3">3</h1>
+    <h1 id="h4">4</h1>
+
+    <script>
+h1 = document.querySelector('#h1');
+h2 = document.querySelector('#h2');
+h3 = document.querySelector('#h3');
+h4 = document.querySelector('#h4');
+
+var x = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+
+function whidthh(){   history.go();
+if (x < 768 ) {
+    h1.style.display='none';
+ 
+}
+
+ if ( x > 768 && x < 992) {
+    h2.style.display='none';
+    h1.style.display='flex';
+  
+ }
+// history.go();
+
+//     location.reload();
+
+}
+
+
+    </script>
+</body>
+</html>
+
+
+

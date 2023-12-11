@@ -115,6 +115,7 @@ button:active {
 .js textarea {
       background: linear-gradient(78deg, white, gray);
       outline: none;
+      /* display: block; */
       word-wrap: break-word;
       font-family: serif;
       font-size: 17px;
@@ -127,7 +128,9 @@ button:active {
       /**/
 }
 
-.css,
+.css {
+      display: none;
+}
 .js {
       display: none;
 }
