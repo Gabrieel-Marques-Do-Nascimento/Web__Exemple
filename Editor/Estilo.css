@@ -179,7 +179,9 @@ Telas Grandes: acima de 1200px
             grid-column: 1/-1;
             background: black;
       }
-
+      nav#modo2 > #html {
+            display: none;
+      }
       .html_ {
             grid-column: 1;
             /*          

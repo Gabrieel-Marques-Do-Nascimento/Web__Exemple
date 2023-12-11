@@ -5,13 +5,24 @@ textcss = document.querySelector("textarea#csst");
 textjs = document.querySelector("textarea#js");
 web1 = document.querySelector(".web1");
 
-textjs.style.color = "green";
-document.body.addEventListener("load", function () {});
 
-function tela() {
-      if (x < 992) {
-      }
-}
+//----------------------- codigo digitado -------------------------------
+
+web1.innerHTML= ` <body>  <style>  ${textcss.value}  </style>` + texthtml.value +`<script>${textjs.value} </Script>` + '</body>';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // modo 1 e modo 2  button ----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -87,7 +98,7 @@ function button(tipo) {
 //       }
 // };
 
-// ------------------------------- RECARREGAR PAGINA----------------------------------
+// ---------------------- RECARREGAR PAGINA-------------------------------
 
 // divhtmlload = document.querySelector(".html_");
 // divcssload = document.querySelector(".css");
@@ -102,3 +113,21 @@ function recarregar() {
       history.go();
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
