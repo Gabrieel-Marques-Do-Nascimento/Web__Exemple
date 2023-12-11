@@ -10,7 +10,7 @@ function web() {
     
             let scriipt = document.createElement("script");
             
-        document.body.appendChild(scriipt);
+        site.appendChild(scriipt);
       scriipt.innerHTML=js;
 
       site.innerHTML =
