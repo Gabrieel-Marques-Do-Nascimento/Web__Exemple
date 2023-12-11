@@ -1,329 +1,246 @@
+/* tela 1*/
 * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
 }
 body {
+      background-color: black;
+      color: white;
       height: 100vh;
-      width: 100vw;
-      background: linear-gradient(78deg, #000109 1%, #04093b);
+      min-width: 100vw;
+      padding: 0 7px;
+      position: relative;
 }
-
-header,
-footer,
-.center {
+header {
+      padding: 1px 0px;
       display: flex;
       align-items: center;
       justify-content: center;
 }
-
-header {
-      background: BLACK;
-      color: white;
-
-      height: 4%;
-      width: 100%;
-}
-nav {
+nav.modos {
+      top: 08px;
+      left: 15px;
       position: absolute;
-      top: 0;
-      left: 0;
-      color: white;
-      padding: 2px;
-      background: grey;
 }
 ul {
-      cursor: pointer;
-      background: black;
-      > li {
-            font-size: 17px;
-            font-family: serif;
-            text-transform: uppercase;
-            border: 1px solid white;
-            padding: 1px;
-      }
+      list-style: none;
+}
+li {
+      text-transform: uppercase;
+      padding: 3px;
+      background-color: aquamarine;
+      text-shadow: 2px 2px 1px black;
+      color: white;
+      transition: 1s;
 }
 li:hover {
-      background: white;
-      color: grey;
-      transition: 1.5s;
+      background-color: rgb(255, 255, 255);
+      text-shadow: 2px 2px 1px black;
+      color: black;
+      font-weight: 500;
 }
-li#tudo {
+li:active {
+      background-color: rgb(210, 206, 206);
+      text-shadow: 2px 2px 2px black;
+      color: black;
+      font-weight: 900;
+}
+#um {
       display: none;
+}
+#tudo {
+      display: block;
 }
 
 .editor {
       width: 100%;
-      height: 93%;
+      height: 90%;
 }
+
 .web {
-      display: inline-block;
       position: relative;
-      background: linear-gradient(78deg, #fbfcff 1%, #bebfc5, #88888a);
-      padding: 10px;
+      padding: 8px;
+      background: linear-gradient(78deg, white, gray);
+      color: black;
       width: 100%;
-      height: 38%;
+      height: 47%;
 }
-div {
-      position: relative;
-}
-#text {
+/* .code{
+      height: 50%;
+} */
+#nome {
       position: absolute;
+      background-color: rgba(3, 3, 255, 0.208);
+      /* color: rgb(255, 185, 185); */
+      color: rgba(255, 255, 255, 0.655);
+      text-shadow: rgba(0, 0, 0, 0.641) 0.1px 5px;
       top: 50%;
       left: 50%;
-      opacity: 0.1;
       transform: translate(-50%, -50%);
 }
-.code {
-      width: 100%;
-      height: 60vh;
-}
-.css_js {
-      display: flex;
-      flex-direction: row;
-}
-textarea {
-      border-radius: 25px 0;
-      word-break: break-all;
-      overflow-y: none;
-      outline: none;
-      color: black;
-      padding: 5px;
-      font-weight: 700;
-      font-size: 18px;
-      text-align: start;
-      word-wrap: wrap;
-}
-.css,
-.js {
-      border: 1px solid black;
-      position: relative;
-      width: 50%;
-      height: 28vh;
-}
-.css > #css,
-.js > #js {
-      position: relative;
 
-      width: 100%;
-      height: 100%;
-}
-.code #htmlt {
-      width: 100%;
-      height: 29vh;
-}
-footer {
-      color: white;
-      position: relative;
-      text-align: center;
-      height: 2.5%;
-      border: 1px black dotted;
-}
-
-.a1 {
-      width: 100%;
-      height: 50%;
-}
-.text {
-      width: 100%;
-      height: 50%;
-}
-#htmlt {
-      width: 100%;
-}
-
-#csst {
-      width: 48.5%;
-}
-#js {
-      width: 48.5%;
-}
-
-/* modo 2*/
-
-textarea {
-      border-radius: 25px 0;
-      word-break: break-all;
-      overflow-y: none;
-      outline: none;
-      color: black;
-      padding: 5px;
-      font-weight: 700;
-      font-size: 18px;
-      text-align: start;
-      word-wrap: wrap;
-}
-.modo2 .css{
-      border: 1px solid black;
-      position: relative;
-     
-      width: 100%;
-      height: 57vh; 
-      display: none;
-}
-.modo2 .js {
-      border: 1px solid black;
-      position: relative;
-     
-      width: 100%;
-      height: 57vh; 
-      display: none;
-}
-.css > #csst,
-.js > #js {
-      position: relative;
-
-      width: 100%;
-      height: 100%;
-}
-.modo2 #htmlt {
-      width: 100%;
-      height: 57vh;
-}
 nav#modo2 {
-      width: 100%;
-      display: none;
-      justify-content: space-around;
-      position: relative;
+      display: flex;
+      justify-content: center;
+      margin: 4px 0;
+      font-family: serif;
+      font-weight: 800;
 }
 button {
-      width: 30%;
+      background: radial-gradient(rgba(223, 219, 219, 0.289), white);
+      font-size: 19px;
+      color: rgb(235, 234, 234);
+      text-shadow: 2px 0px 0 black;
+      text-transform: uppercase;
+      margin: 0 4px;
+      padding: 3px;
+      width: 85px;
+      transition: 0.5s;
 }
-#htmlb {
+button:hover {
+      border-radius: 20%;
 }
-#javascriptb {
+button:active {
+      border-radius: 50%;
 }
-#cssb {
+.html_,
+.css,
+.js {
+      position: relative;
+      height: 42vh;
+}
+.html_ textarea,
+.css textarea,
+.js textarea {
+      background: linear-gradient(78deg, white, gray);
+      outline: none;
+      /* display: block; */
+      word-wrap: break-word;
+      font-family: serif;
+      font-size: 17px;
+      color: rgb(47, 1, 1);
+      font-weight: 800;
+      padding: 7px;
+      width: 100%;
+      height: 100%;
+
+      /**/
 }
 
-@media screen and (min-width:992px){
+.css {
+      display: none;
+}
+.js {
+      display: none;
+}
 
-      li#um {
+footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 2%;
+}
+
+/*
+typical device braakpoints
+--------------------------------
+medidas w3c  
+-----------------------------------
+Pequenas telas ate 600px      // ja foi criado
+Celular : de 600px ate 768px  // ja foi criado
+Tablet: 768px ate 992px
+Desktop: 992                  (ate 1200px)
+Telas Grandes: acima de 1200px
+*/
+
+/* tela 2*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+      body {
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(28, 27, 26);
+      }
+      header h1 {
+            background: black;
+            padding: 0 50px;
+            margin: 4px;
+      }
+
+    
+      .code {
+            max-width: 100vw;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, auto);
+      }
+      nav#modo2 {
+            grid-column: 1/-1;
+            background: black;
+      }
+
+      .html_ {
+            grid-column: 1;
+            /*          
+          width: 40%; */
+      }
+      .css_js {
+            grid-column: 2;
+            /* width: 40%; */
+      }
+      .css {
             display: block;
       }
-      li#tudo {
-            display: none;
+      .js {
+      }
+      footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 3%;
+      }
+}
+
+/* tela 3*/
+@media screen and (min-width: 992px) {
+      body{
+            overflow: hidden;
+      }  .web{
+            height: 52%;
       }
       .code {
-            width: 100%;
-            height: 60vh;
+            max-width: 100vw;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, auto);
+      }
+      nav#modo2 {
+            display: none;
+            background: black;
+      }
+
+      .html_ {
+            grid-column: 1;
+            width: auto;
       }
       .css_js {
             display: flex;
-            flex-direction: row;
+            grid-column: 2/-1;
+            width: auto;
       }
-      textarea {
-            border-radius: 25px 0;
-            word-break: break-all;
-            overflow-y: none;
-            outline: none;
-            color: black;
-            padding: 5px;
-            font-weight: 700;
-            font-size: 18px;
-            text-align: start;
-            word-wrap: wrap;
-      }
-      .css,
-      .js {
-            border: 1px solid black;
-            position: relative;
+      .css {
+            display: flex;
+
             width: 50%;
-            height: 28vh;
       }
-      .css > #css,
-      .js > #js {
-            position: relative;
-      
-            width: 100%;
-            height: 100%;
+      .js {
+            display: block;
+            width: 50%;
       }
-      .code #htmlt {
-            width: 100%;
-            height: 29vh;
-      }
-      footer {
-            color: white;
-            position: relative;
-            text-align: center;
-            height: 2.5%;
-            border: 1px black dotted;
-      }
-      
-      .a1 {
-            width: 100%;
-            height: 50%;
-      }
-      .text {
-            width: 100%;
-            height: 50%;
-      }
-      #htmlt {
-            width: 100%;
-      }
-      
-      #csst {
-            width: 48.5%;
-      }
-      #js {
-            width: 48.5%;
-      }
-      
-      /* modo 2*/
-      
-      textarea {
-            border-radius: 25px 0;
-            word-break: break-all;
-            overflow-y: none;
-            outline: none;
-            color: black;
-            padding: 5px;
-            font-weight: 700;
-            font-size: 18px;
-            text-align: start;
-            word-wrap: wrap;
-      }
-      .modo2 .css{
-            border: 1px solid black;
-            position: relative;
-           
-            width: 100%;
-            height: 57vh; 
-            display: none;
-      }
-      .modo2 .js {
-            border: 1px solid black;
-            position: relative;
-           
-            width: 100%;
-            height: 57vh; 
-            display: none;
-      }
-      .css > #csst,
-      .js > #js {
-            position: relative;
-      
-            width: 100%;
-            height: 100%;
-      }
-      .modo2 #htmlt {
-            width: 100%;
-            height: 57vh;
-      }
-      nav#modo2 {
-            width: 100%;
-            display: none;
-            justify-content: space-around;
-            position: relative;
-      }
-      button {
-            width: 30%;
-      }
-      #htmlb {
-      }
-      #javascriptb {
-      }
-      #cssb {
-      }
-      
 }
+
+/* tres telas 
+tela 1 com   html  1 linha
+tela 2 com html  50% e css  50%  1 linha  nav button js clicado muda pra js
+tela 3 com  html 100%  css  50% js  50%* 2 linhas  nav  display none */
